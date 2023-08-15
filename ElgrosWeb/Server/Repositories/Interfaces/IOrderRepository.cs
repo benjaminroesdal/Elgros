@@ -1,4 +1,4 @@
-﻿using ElgrosWeb.Server.Data.Models;
+﻿using ElgrosWeb.Shared.Dao;
 using ElgrosWeb.Shared.Models;
 
 namespace ElgrosWeb.Server.Repositories.Interfaces

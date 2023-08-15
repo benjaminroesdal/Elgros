@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\ElgrosWeb.Server.props" />
+</Project>

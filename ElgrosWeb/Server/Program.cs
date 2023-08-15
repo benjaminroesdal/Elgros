@@ -1,4 +1,9 @@
-using Microsoft.AspNetCore.ResponseCompression;
+using ElgrosWeb.Server.Data.Db;
+using ElgrosWeb.Server.Facades;
+using ElgrosWeb.Server.Facades.Interfaces;
+using ElgrosWeb.Server.Repositories;
+using ElgrosWeb.Server.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,7 +11,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
-
+builder.Services.AddDbContext<ElgrosContext>(options => options.UseSqlServer(@"Server=(LocalDb)\MSSQLLocalDB;Database=ElgrosDb;Trusted_Connection=True"));
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IProductFacade, ProductFacade>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -20,7 +27,11 @@ else
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
-
+using (var serviceScope = app.Services.CreateScope())
+{
+    var ctx = serviceScope.ServiceProvider.GetService<ElgrosContext>();
+    DbInitializer.Initialize(ctx);
+}
 app.UseHttpsRedirection();
 
 app.UseBlazorFrameworkFiles();

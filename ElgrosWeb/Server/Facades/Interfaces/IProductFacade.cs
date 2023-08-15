@@ -6,8 +6,7 @@ namespace ElgrosWeb.Server.Facades.Interfaces
     public interface IProductFacade
     {
         Task<List<ProductModel>> GetCategoryProducts(Category productCategory);
-        Task<List<ProductModel>> GetElectricalProducts(ElectricalCategory productCategory);
-        Task<List<ProductModel>> GetVvsProducts(VvsCategory productCategory);
+        Task<List<ProductModel>> GetSubCategoryProducts(SubCategoryModel productCategory);
     }
 }
     
