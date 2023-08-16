@@ -14,5 +14,15 @@ namespace ElgrosWeb.Shared.Tools
                 Status = dao.Status,
             };
         }
+
+        public static PaymentDao CreateDao(this PaymentModel dao)
+        {
+            return new PaymentDao()
+            {
+                Id = dao.Id,
+                Provider = dao.Provider,
+                Status = dao.Status,
+            };
+        }
     }
 }

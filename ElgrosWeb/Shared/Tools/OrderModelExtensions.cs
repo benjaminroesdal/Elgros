@@ -16,5 +16,17 @@ namespace ElgrosWeb.Shared.Tools
                 PaymentDetails = orderDao.PaymentDetails.CreateModel()
             };
         }
+
+        public static OrderDao CreateDao(this OrderModel orderModel)
+        {
+            return new OrderDao()
+            {
+                Id = orderModel.Id,
+                User = orderModel.User.CreateDao(),
+                Products = orderModel.Products.CreateDaoList(),
+                TotalAmount = orderModel.TotalAmount,
+                PaymentDetails = orderModel.PaymentDetails.CreateDao()
+            };
+        }
     }
 }

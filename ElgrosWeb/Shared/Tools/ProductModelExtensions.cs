@@ -15,6 +15,21 @@ namespace ElgrosWeb.Shared.Tools
                 Brand = dao.Brand,
                 Category = dao.Category,
                 Price = dao.Price,
+                SubCategoryList = dao.SubCategoryList.CreateModelList()
+            };
+        }
+
+        public static ProductDao CreateDao(this ProductModel model)
+        {
+            return new ProductDao()
+            {
+                Id = model.Id,
+                Name = model.Name,
+                Description = model.Description,
+                Brand = model.Brand,
+                Category = model.Category,
+                Price = model.Price,
+                SubCategoryList = new List<SubCategoryDao>()
             };
         }
 
@@ -23,6 +38,13 @@ namespace ElgrosWeb.Shared.Tools
             var modelList = new List<ProductModel>();
             dao.ForEach(e => modelList.Add(e.CreateModel()));
             return modelList;
+        }
+
+        public static List<ProductDao> CreateDaoList(this List<ProductModel> modelList)
+        {
+            var daoList = new List<ProductDao>();
+            modelList.ForEach(e => daoList.Add(e.CreateDao()));
+            return daoList;
         }
     }
 }

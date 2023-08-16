@@ -5,7 +5,7 @@ namespace ElgrosWeb.Server.Facades.Interfaces
 {
     public interface IOrderFacade
     {
-        Task<OrderModel> CreateOrder(OrderDao orderDao);
+        Task<OrderModel> CreateOrder(OrderModel orderModel);
         Task<OrderModel> GetOrder(int orderId);
     }
 }

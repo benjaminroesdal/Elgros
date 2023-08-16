@@ -7,5 +7,6 @@ namespace ElgrosWeb.Server.Repositories.Interfaces
     {
         Task<List<ProductModel>> GetCategoryProducts(Category productCategory);
         Task<List<ProductModel>> GetSubCategoryProducts(int subCategoryId);
+        Task<List<SubCategoryModel>> GetSubCategorys(Category category);
     }
 }

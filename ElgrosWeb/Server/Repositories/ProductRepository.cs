@@ -36,5 +36,15 @@ namespace ElgrosWeb.Server.Repositories
             }
             return products.CreateModelList();
         }
+
+        public async Task<List<SubCategoryModel>> GetSubCategorys(Category category)
+        {
+            List<SubCategoryDao> subCategorys;
+            using (var context = _context)
+            {
+                subCategorys = await context.SubCategory.Where(e => e.Category == category).ToListAsync();
+            }
+            return subCategorys.CreateModelList();
+        }
     }
 }

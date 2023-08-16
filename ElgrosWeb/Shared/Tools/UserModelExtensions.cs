@@ -16,5 +16,17 @@ namespace ElgrosWeb.Shared.Tools
                 PhoneNumber = dao.PhoneNumber,
             };
         }
+
+        public static UserDao CreateDao(this UserModel model)
+        {
+            return new UserDao()
+            {
+                Id = model.Id,
+                FirstName = model.FirstName,
+                LastName = model.LastName,
+                Address = model.Address,
+                PhoneNumber = model.PhoneNumber
+            };
+        }
     }
 }

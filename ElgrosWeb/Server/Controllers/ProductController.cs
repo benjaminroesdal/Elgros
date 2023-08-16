@@ -1,11 +1,12 @@
 using ElgrosWeb.Server.Facades.Interfaces;
+using ElgrosWeb.Shared.Enums;
 using ElgrosWeb.Shared.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ElgrosWeb.Server.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class ProductController : ControllerBase
     {
         private readonly ILogger<ProductController> _logger;
@@ -36,6 +37,13 @@ namespace ElgrosWeb.Server.Controllers
         public async Task<List<ProductModel>> GetProductsSubCategory([FromBody] SubCategoryModel model)
         {
             return await _productFacade.GetSubCategoryProducts(model);
+        }
+
+        [HttpGet]
+        [Route("GetAllSubcategorys")]
+        public async Task<List<SubCategoryModel>> GetAllSubCategorys(Category category)
+        {
+            return await _productFacade.GetSubCategorys(category);
         }
     }
 }

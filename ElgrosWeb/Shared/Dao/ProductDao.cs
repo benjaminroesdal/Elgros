@@ -13,6 +13,6 @@ namespace ElgrosWeb.Shared.Dao
         public DateTime CreatedAt { get; set; }
         public DateTime ModifiedAt { get; set; }
         public List<OrderDao> OrderList { get; set; }
-        public List<SubCategoryDao> SubCategoryList { get; set; }
+        public List<SubCategoryDao>? SubCategoryList { get; set; }
     }
 }

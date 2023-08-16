@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ElgrosWeb.Server.Migrations
 {
     [DbContext(typeof(ElgrosContext))]
-    [Migration("20230815113602_First")]
+    [Migration("20230816073932_First")]
     partial class First
     {
         /// <inheritdoc />
@@ -127,6 +127,9 @@ namespace ElgrosWeb.Server.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Category")
+                        .HasColumnType("int");
 
                     b.Property<string>("Description")
                         .IsRequired()

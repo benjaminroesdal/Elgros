@@ -19,42 +19,50 @@ namespace ElgrosWeb.Server.Data.Db
                 new SubCategoryDao()
                 {
                     Name = "Toilet",
-                    Description = "Sinds"
+                    Description = "Sinds",
+                    Category = Category.VVS
                 },
                 new SubCategoryDao()
                 {
                     Name = "Vandhane",
-                    Description = "Sinds"
+                    Description = "Sinds",
+                    Category = Category.VVS
                 },
                 new SubCategoryDao()
                 {
                     Name = "Afløbsrør",
-                    Description = "Sinds"
+                    Description = "Sinds",
+                    Category = Category.VVS
                 },
                 new SubCategoryDao()
                 {
                     Name = "Vaskemaskine",
-                    Description = "Sinds"
+                    Description = "Sinds",
+                    Category = Category.VVS
                 },
                 new SubCategoryDao()
                 {
                     Name = "Blandingsbatteri",
-                    Description = "Sinds"
+                    Description = "Sinds",
+                    Category = Category.VVS
                 },
                 new SubCategoryDao()
                 {
                     Name = "Eltavle",
-                    Description = "Sinds"
+                    Description = "Sinds",
+                    Category = Category.Electrical
                 },
                 new SubCategoryDao()
                 {
                     Name = "Stikdåse",
-                    Description = "Sinds"
+                    Description = "Sinds",
+                    Category = Category.Electrical
                 },
                 new SubCategoryDao()
                 {
                     Name = "Køleskab",
-                    Description = "Sinds"
+                    Description = "Sinds",
+                    Category = Category.Electrical
                 },
             };
             ctx.SubCategory.AddRange(subCategorys);

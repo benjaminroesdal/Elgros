@@ -14,6 +14,8 @@ builder.Services.AddRazorPages();
 builder.Services.AddDbContext<ElgrosContext>(options => options.UseSqlServer(@"Server=(LocalDb)\MSSQLLocalDB;Database=ElgrosDb;Trusted_Connection=True"));
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IProductFacade, ProductFacade>();
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+builder.Services.AddScoped<IOrderFacade, OrderFacade>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

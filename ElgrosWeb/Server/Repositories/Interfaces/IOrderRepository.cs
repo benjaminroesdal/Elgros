@@ -5,7 +5,7 @@ namespace ElgrosWeb.Server.Repositories.Interfaces
 {
     public interface IOrderRepository
     {
-        Task<OrderModel> CreateAsync(OrderDao order);
+        Task<OrderModel> CreateAsync(OrderModel orderModel);
         Task<OrderModel> GetAsync(int id);
     }
 }

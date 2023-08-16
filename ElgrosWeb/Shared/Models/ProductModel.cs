@@ -13,9 +13,10 @@ namespace ElgrosWeb.Shared.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public string Brand { get; set; }
-        public Category Category { get; set; }
         public double Price { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime ModifiedAt { get; set; }
+        public Category Category { get; set; }
+        public List<SubCategoryModel> SubCategoryList { get; set; }
     }
 }

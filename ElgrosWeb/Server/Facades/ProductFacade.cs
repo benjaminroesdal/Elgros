@@ -1,4 +1,5 @@
 ﻿using ElgrosWeb.Server.Facades.Interfaces;
+using ElgrosWeb.Server.Repositories;
 using ElgrosWeb.Server.Repositories.Interfaces;
 using ElgrosWeb.Shared.Enums;
 using ElgrosWeb.Shared.Models;
@@ -17,5 +18,8 @@ namespace ElgrosWeb.Server.Facades
 
         public Task<List<ProductModel>> GetSubCategoryProducts(SubCategoryModel productCategory) 
             => _repository.GetSubCategoryProducts(productCategory.Id);
+
+        public Task<List<SubCategoryModel>> GetSubCategorys(Category category)
+            => _repository.GetSubCategorys(category);
     }
 }

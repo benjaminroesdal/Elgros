@@ -196,15 +196,15 @@
       "mscorlib.dll": "sha256-ZQiPq7CHB7vwsbgiGeI63xqAYmfnZVwKnCDxwIIfh68=",
       "netstandard.dll": "sha256-OUZMjYvE6WNC75Ypitp3ukl0+FlDbSW+OYEIsU7XlgQ=",
       "System.Private.CoreLib.dll": "sha256-uJANsJB4HA9iyaKf1ryCSbtypfL2uQZWxXKIn0Fz5+c=",
-      "ElgrosWeb.Shared.dll": "sha256-hDN0hVKmd7rJmdcS1fx8KBnMTm\/Eo2yoUboqxrhcqPw=",
-      "ElgrosWeb.Client.dll": "sha256-QjzeZ49eVkeqX8nffnWhECFjqIpmqITahUJrWW+4wTk="
+      "ElgrosWeb.Shared.dll": "sha256-8ALwHFKTgyIsEP\/nY97uJvB\/b5PLraFi1R0BPh6bLdk=",
+      "ElgrosWeb.Client.dll": "sha256-hMXGjwvJBd2WMIPHPGCG+pSbVHszqnBFcmLtcV7E0jA="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "ElgrosWeb.Shared.pdb": "sha256-USB+rzkl7L5uGvudK3iH8IeFhJ2f2kR\/33hjKYNxdmk=",
-      "ElgrosWeb.Client.pdb": "sha256-pl4n18Nb51kcnxtYGrgboKAsBu9RfaYA\/pxWoCgyH6s="
+      "ElgrosWeb.Shared.pdb": "sha256-Wzr1V7uG\/EwUIK19\/m8RFWI+mNGh9s9p5vRvKWcLEvs=",
+      "ElgrosWeb.Client.pdb": "sha256-2jDA+McXTWZAh6qE83O40\/mA\/oJoONwbRSqZb6hfpmI="
     },
     "runtime": {
       "dotnet.6.0.21.yocstdpf1h.js": "sha256-0OV6gibFzyVtG7NXEj8a6vG3u8Cbzv4l9kkEathZjQ8=",
