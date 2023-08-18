@@ -5,7 +5,7 @@
       "url": "css\/app.css"
     },
     {
-      "hash": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=",
+      "hash": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7\/p4nS6D\/0=",
       "url": "css\/bootstrap\/bootstrap.min.css"
     },
     {
@@ -61,7 +61,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-\/TtgS0Bk7och5CTelGHCYLTUP91ROsedJDqJI3rNo+8=",
+      "hash": "sha256-CyfIwovzwJisIEFiz+DlTPdOj3hcTMgcTLEmSKtg\/6E=",
       "url": "index.html"
     },
     {
@@ -69,7 +69,7 @@
       "url": "manifest.json"
     },
     {
-      "hash": "sha256-vy1iLVdEvTdfzmDQZSksRFJ39jXYcub2wjWYBmachsI=",
+      "hash": "sha256-w911bh9BL2oBBX5i8\/9opraJ+OGdg7W32ZRf4xxNH90=",
       "url": "ElgrosWeb.Client.styles.css"
     },
     {
@@ -137,6 +137,14 @@
       "url": "_framework\/Microsoft.Extensions.FileSystemGlobbing.dll"
     },
     {
+      "hash": "sha256-5vcfCTnU9cD9k\/NWMvpZbd0bLlMNu2nGYzwRR7pE2zE=",
+      "url": "_framework\/Microsoft.Extensions.Localization.dll"
+    },
+    {
+      "hash": "sha256-mlOCYrC65BpJ1O\/5ql15iSS3u4e4w7O7YSqi0ZN5cl4=",
+      "url": "_framework\/Microsoft.Extensions.Localization.Abstractions.dll"
+    },
+    {
       "hash": "sha256-GDZQCBtVHfrZZ6fL95lGoinLeUWLjQShLbfESwO7mrc=",
       "url": "_framework\/Microsoft.Extensions.Logging.dll"
     },
@@ -159,6 +167,10 @@
     {
       "hash": "sha256-s\/HIPurCmWdqBqCGdD2SGhlrYbVoPgGOyprDQbtwnco=",
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.dll"
+    },
+    {
+      "hash": "sha256-j5esyFA8QWTv+ThXT9gc5HYAOcJCvDWYTrg+hiSN6RY=",
+      "url": "_framework\/MudBlazor.dll"
     },
     {
       "hash": "sha256-6+E55JXedimdw1c1bDtVg4K7XuWjVWVTifH8QpfzXSY=",
@@ -829,8 +841,8 @@
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-0OV6gibFzyVtG7NXEj8a6vG3u8Cbzv4l9kkEathZjQ8=",
-      "url": "_framework\/dotnet.6.0.21.yocstdpf1h.js"
+      "hash": "sha256-fb2wBZaRp096nChMG9nDNEcW0kW1whA\/kfQNyH+5QpQ=",
+      "url": "_framework\/dotnet.6.0.15.tgk2hjqd5r.js"
     },
     {
       "hash": "sha256-qzglp3nbykfmnfsUz92dqiKN6QkhG7mKOOV4q9TztDs=",
@@ -857,19 +869,19 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-UpGaoxtkQn58FoRCU6gegR\/laJTF3K+m2q8yKlse7IU=",
+      "hash": "sha256-l\/I747delxZsLQ7DA5zQU7f66s+CIElxbH5bSzCA9UA=",
       "url": "_framework\/ElgrosWeb.Shared.dll"
     },
     {
-      "hash": "sha256-gHMDU8sWD7\/IS1+\/nwNUdxYMtcjF5cElExPQ7FVbukE=",
+      "hash": "sha256-wpM5vfnQ4g0UwCpgxxDoUAzdsfypFYp39aEb2IQOaz8=",
       "url": "_framework\/ElgrosWeb.Shared.pdb"
     },
     {
-      "hash": "sha256-PxQ8+oxpp4omBz+eM9DCbwiK2n4unlYNdXYlnUwHZUg=",
+      "hash": "sha256-4fjdcejlvLau7uX4ie8C\/WkynhxvU0VRDeA9qHdYqHs=",
       "url": "_framework\/ElgrosWeb.Client.dll"
     },
     {
-      "hash": "sha256-cOVeh6Zq1pH\/CQwER+u7ynMHRoksZB3LZ\/g0zoG7RJA=",
+      "hash": "sha256-196e3HVGZ0bijlBLe7EreryV6NuDIJmG5Xk\/toI8x5w=",
       "url": "_framework\/ElgrosWeb.Client.pdb"
     },
     {
@@ -877,9 +889,17 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-xQ23JSU9EI3clbsrvsPTXUPzPAsNG3H85NjwSUwDwOU=",
+      "hash": "sha256-+xEM40L5a6vJTvMCaudPCrN2dXXFv5Q2J0iQkOFmcZE=",
       "url": "_framework\/blazor.boot.json"
+    },
+    {
+      "hash": "sha256-Tg278AYGGMM20HroH4akCGsdZn5qwLK9xiHsIUQ8I2w=",
+      "url": "_content\/MudBlazor\/MudBlazor.min.css"
+    },
+    {
+      "hash": "sha256-cEkHoF6mqnpcCf1Crp4bG1VI9JoRfS09AUhEND78hho=",
+      "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "f0msqAX\/"
+  "version": "frHAijEr"
 };

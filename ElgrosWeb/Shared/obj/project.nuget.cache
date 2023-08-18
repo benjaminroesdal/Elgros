@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "hjFeO4Zcq1zA2odYkzuSe6PkMuiq5cH8AHsI/IWD1Ahgw1twC+WCMZFH1BM/Gw46QfPDRSWYH/5Qv8EePYWVlA==",
+  "dgSpecHash": "U04mp9Ep35az7Pjdpm/IinllcEkcRZLZ96WeqVHNULhAHrGjSDVz1PIFKd5R2ukb4Im4tk54jCrldluPgC+OIg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\benja\\Documents\\GitHub\\Elgros\\ElgrosWeb\\Shared\\ElgrosWeb.Shared.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Alexandar\\Documents\\GitHub\\Elgros\\ElgrosWeb\\Shared\\ElgrosWeb.Shared.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alexandar\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.15\\microsoft.netcore.app.ref.6.0.15.nupkg.sha512",
+    "C:\\Users\\Alexandar\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.15\\microsoft.windowsdesktop.app.ref.6.0.15.nupkg.sha512",
+    "C:\\Users\\Alexandar\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.15\\microsoft.aspnetcore.app.ref.6.0.15.nupkg.sha512"
+  ],
   "logs": []
 }
