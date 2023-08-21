@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "QmVAEtU1Tg/xO4c9sFnCxfGo1Dp/R9yLZSEynrqLjKjtpzpVXMNBrTCdl2AyM7l/oAwMiS2l2kVnj9GLFNLalQ==",
+  "dgSpecHash": "gmW5AZibxNAIp9pf5sOkeaU52hafmenX5aLBpRVHlOAvT5ON35oNLWMwnqPXMVMf3GzyFczoxgHJIq2H5H6F8A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Alexandar\\Documents\\GitHub\\Elgros\\ElgrosWeb\\Client\\ElgrosWeb.Client.csproj",
   "expectedPackageFiles": [
@@ -33,9 +33,10 @@
     "C:\\Users\\Alexandar\\.nuget\\packages\\mudblazor\\6.8.0\\mudblazor.6.8.0.nupkg.sha512",
     "C:\\Users\\Alexandar\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\Alexandar\\.nuget\\packages\\system.io.pipelines\\6.0.3\\system.io.pipelines.6.0.3.nupkg.sha512",
+    "C:\\Users\\Alexandar\\.nuget\\packages\\system.net.http.json\\7.0.1\\system.net.http.json.7.0.1.nupkg.sha512",
     "C:\\Users\\Alexandar\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
-    "C:\\Users\\Alexandar\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
-    "C:\\Users\\Alexandar\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",
+    "C:\\Users\\Alexandar\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
+    "C:\\Users\\Alexandar\\.nuget\\packages\\system.text.json\\7.0.2\\system.text.json.7.0.2.nupkg.sha512",
     "C:\\Users\\Alexandar\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.15\\microsoft.netcore.app.ref.6.0.15.nupkg.sha512",
     "C:\\Users\\Alexandar\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.15\\microsoft.netcore.app.runtime.mono.browser-wasm.6.0.15.nupkg.sha512",
     "C:\\Users\\Alexandar\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.15\\microsoft.windowsdesktop.app.ref.6.0.15.nupkg.sha512",

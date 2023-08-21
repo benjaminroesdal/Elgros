@@ -56,6 +56,10 @@
             "MudBlazor": {
               "target": "Package",
               "version": "[6.8.0, )"
+            },
+            "System.Net.Http.Json": {
+              "target": "Package",
+              "version": "[7.0.1, )"
             }
           },
           "imports": [

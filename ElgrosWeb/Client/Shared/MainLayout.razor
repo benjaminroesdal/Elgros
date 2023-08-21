@@ -1,5 +1,6 @@
-﻿@inherits LayoutComponentBase
-
+﻿@using ElgrosWeb.Client.Services
+@inherits LayoutComponentBase
+@inject CategoryService CategoryService
 <MudThemeProvider/>
 <MudDialogProvider/>
 <MudSnackbarProvider/>
@@ -20,11 +21,3 @@
         @Body
     </MudMainContent>
 </MudLayout>
-@code {
-    bool _drawerOpen = false;
-
-    void DrawerToggle()
-    {
-        _drawerOpen = !_drawerOpen;
-    }
-}

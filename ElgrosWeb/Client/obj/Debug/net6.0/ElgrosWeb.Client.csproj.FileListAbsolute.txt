@@ -1538,7 +1538,6 @@ C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Client\obj\Debug\net6.0\bui
 C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Client\obj\Debug\net6.0\build-gz\L4DKxd0b.gz
 C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Client\obj\Debug\net6.0\build-gz\esbquC2h.gz
 C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Client\obj\Debug\net6.0\build-gz\hdHPmw66.gz
-C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Client\obj\Debug\net6.0\build-gz\G4d9ikmA.gz
 C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Client\obj\Debug\net6.0\build-gz\1WwqHwdC.gz
 C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Client\obj\Debug\net6.0\build-gz\SrcPGCNb.gz
 C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Client\obj\Debug\net6.0\build-gz\Bd2V4YxW.gz
@@ -1610,8 +1609,6 @@ C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Client\obj\Debug\net6.0\bui
 C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Client\obj\Debug\net6.0\build-gz\+Xehs1gs.gz
 C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Client\obj\Debug\net6.0\build-gz\IWulIQG8.gz
 C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Client\obj\Debug\net6.0\build-gz\Ta6OGlNm.gz
-C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Client\obj\Debug\net6.0\build-gz\PT6Z+HYP.gz
-C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Client\obj\Debug\net6.0\build-gz\vgzqSigj.gz
 C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Client\obj\Debug\net6.0\build-gz\jo+zAl60.gz
 C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Client\obj\Debug\net6.0\build-gz\JZdUf+Yq.gz
 C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Client\obj\Debug\net6.0\build-gz\JJ9JhjCw.gz
@@ -1673,3 +1670,6 @@ C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Client\obj\Debug\net6.0\Elg
 C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Client\obj\Debug\net6.0\refint\ElgrosWeb.Client.dll
 C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Client\obj\Debug\net6.0\ElgrosWeb.Client.pdb
 C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Client\obj\Debug\net6.0\ref\ElgrosWeb.Client.dll
+C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Client\obj\Debug\net6.0\build-gz\K7H7t49o.gz
+C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Client\obj\Debug\net6.0\build-gz\p7X6+gLt.gz
+C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Client\obj\Debug\net6.0\build-gz\3f1+QJUk.gz

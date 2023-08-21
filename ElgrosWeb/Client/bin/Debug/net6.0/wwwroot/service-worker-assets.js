@@ -177,6 +177,18 @@
       "url": "_framework\/System.IO.Pipelines.dll"
     },
     {
+      "hash": "sha256-8m5PuUDuETFNA8gxeO5n6FlHbqNj98TBL9W8lRyxzzY=",
+      "url": "_framework\/System.Net.Http.Json.dll"
+    },
+    {
+      "hash": "sha256-TGLqJZY1VLruAmUfngZXRmbm+rlHwWkNXlkrG2cV0Qo=",
+      "url": "_framework\/System.Text.Encodings.Web.dll"
+    },
+    {
+      "hash": "sha256-zzBYeQwz5imP9R5TZ6Wu5i8MZJvCEvY7QAvGAM9P6ZE=",
+      "url": "_framework\/System.Text.Json.dll"
+    },
+    {
       "hash": "sha256-V8z6Cnk+\/\/2pdmHVEe\/AMM1A2Pzxn7xDOxJGoUI+DZ0=",
       "url": "_framework\/Microsoft.CSharp.dll"
     },
@@ -419,10 +431,6 @@
     {
       "hash": "sha256-+6x3ElXpx22otG3GN2Ub9d7ZidAEWYOn3BdhwWfdwwI=",
       "url": "_framework\/System.Memory.dll"
-    },
-    {
-      "hash": "sha256-8m5PuUDuETFNA8gxeO5n6FlHbqNj98TBL9W8lRyxzzY=",
-      "url": "_framework\/System.Net.Http.Json.dll"
     },
     {
       "hash": "sha256-F7AFKCwcEmTKWqmdSO0hWr7FEL1ZNRNEc5MaOWFtueA=",
@@ -709,14 +717,6 @@
       "url": "_framework\/System.Text.Encoding.dll"
     },
     {
-      "hash": "sha256-TGLqJZY1VLruAmUfngZXRmbm+rlHwWkNXlkrG2cV0Qo=",
-      "url": "_framework\/System.Text.Encodings.Web.dll"
-    },
-    {
-      "hash": "sha256-zzBYeQwz5imP9R5TZ6Wu5i8MZJvCEvY7QAvGAM9P6ZE=",
-      "url": "_framework\/System.Text.Json.dll"
-    },
-    {
       "hash": "sha256-GOgRFp2Cm65IipF8obZOh0yKnK+97zux4eEvFgMLMxU=",
       "url": "_framework\/System.Text.RegularExpressions.dll"
     },
@@ -877,11 +877,11 @@
       "url": "_framework\/ElgrosWeb.Shared.pdb"
     },
     {
-      "hash": "sha256-4fjdcejlvLau7uX4ie8C\/WkynhxvU0VRDeA9qHdYqHs=",
+      "hash": "sha256-cC+MpAUAa0gNahIuPOJmYBKC3S83mMlCNKqiz6bnZMw=",
       "url": "_framework\/ElgrosWeb.Client.dll"
     },
     {
-      "hash": "sha256-196e3HVGZ0bijlBLe7EreryV6NuDIJmG5Xk\/toI8x5w=",
+      "hash": "sha256-QSZUsbzawetxhGrl+twj5J2ijqCH5+W3pp9SdXexaRs=",
       "url": "_framework\/ElgrosWeb.Client.pdb"
     },
     {
@@ -889,7 +889,7 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-+xEM40L5a6vJTvMCaudPCrN2dXXFv5Q2J0iQkOFmcZE=",
+      "hash": "sha256-wB8a1RtHFGH\/eTC5lg6J77Eeq3r3E6vrUVewaGncIc4=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -901,5 +901,5 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "frHAijEr"
+  "version": "M4TSeqEY"
 };

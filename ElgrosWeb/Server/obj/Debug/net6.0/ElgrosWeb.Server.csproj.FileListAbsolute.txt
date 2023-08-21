@@ -213,3 +213,4 @@ C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Server\obj\Debug\net6.0\ref
 C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Server\obj\Debug\net6.0\ElgrosWeb.Server.pdb
 C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Server\obj\Debug\net6.0\ElgrosWeb.Server.genruntimeconfig.cache
 C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Server\obj\Debug\net6.0\ref\ElgrosWeb.Server.dll
+C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Server\bin\Debug\net6.0\System.Net.Http.Json.dll
