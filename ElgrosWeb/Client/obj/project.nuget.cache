@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "U1LPSYNogNLl8HnTg7XovytyvajPmeO3HZmc6uLHrdago7wphMkj3MR2tyJPBjJ02ng8SZxZ6jhTFigA3wKxwQ==",
+  "dgSpecHash": "FDvIHhA92z37Y8km2g91Y/fkD9U6zgXMh/ZcNi8uh2dsFKStMl7ROur4PZ2dz0wycKyZhchNjY75dchQ72J/NQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Alexandar\\Documents\\GitHub\\Elgros\\ElgrosWeb\\Client\\ElgrosWeb.Client.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Alexandar\\.nuget\\packages\\blazored.localstorage\\4.4.0\\blazored.localstorage.4.4.0.nupkg.sha512",
     "C:\\Users\\Alexandar\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.20\\microsoft.aspnetcore.authorization.6.0.20.nupkg.sha512",
     "C:\\Users\\Alexandar\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.20\\microsoft.aspnetcore.components.6.0.20.nupkg.sha512",
     "C:\\Users\\Alexandar\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\6.0.20\\microsoft.aspnetcore.components.analyzers.6.0.20.nupkg.sha512",

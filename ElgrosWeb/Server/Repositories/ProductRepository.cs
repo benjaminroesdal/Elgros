@@ -46,5 +46,6 @@ namespace ElgrosWeb.Server.Repositories
             }
             return subCategorys.CreateModelList();
         }
+
     }
 }

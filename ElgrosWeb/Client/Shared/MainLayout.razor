@@ -1,7 +1,10 @@
 ﻿@using ElgrosWeb.Client.Services
+@using ElgrosWeb.Shared.Enums;
 @inherits LayoutComponentBase
 @inject CategoryService CategoryService
 @inject ProductService ProductService
+@inject NavigationManager NavManager
+
 <MudThemeProvider/>
 <MudDialogProvider/>
 <MudSnackbarProvider/>
@@ -15,18 +18,21 @@
         <MudIconButton Icon="@Icons.Material.Filled.ShoppingBasket" Color="Color.Inherit" Edge="Edge.End"/>
     </MudAppBar>
     <MudDrawer @bind-Open="_drawerOpen" ClipMode="DrawerClipMode.Always" Elevation="3">
-        <MudNavLink Href="/" Match="NavLinkMatch.All">Home</MudNavLink>
-        <MudNavLink Href="/Product" Match="NavLinkMatch.Prefix">Product</MudNavLink>
         <MudList Clickable="true">
-                <MudListSubheader>
-                    Nested List Items
-                </MudListSubheader>
-                @foreach(var subCategory in SubCategories)
-                    {
-                        <MudListItem Icon="@Icons.Material.Filled.Folder" Text="@subCategory.Name" @onclick="(() => HandleItemClick(subCategory))">
-                            <!-- You can include nested items or any other logic here if needed -->
-                        </MudListItem>
-                    }
+
+            @foreach (Category cat in Enum.GetValues(typeof(Category)))
+            {
+                <MudListItem Icon="@Icons.Material.Filled.Folder" Text="@cat.ToString()" @onclick="(() => HandleItemClick(cat))">
+                    <NestedList>
+                        @foreach (var subCategory in SubCategories.Where(sc => sc.Category == cat))
+                        {
+                            <MudListItem Icon="@Icons.Material.Filled.Folder" Text="@subCategory.Name" @onclick="(() => HandleItemClick(subCategory))">
+                                <!-- You can include nested items or any other logic here if needed -->
+                            </MudListItem>
+                        }
+                    </NestedList>
+                </MudListItem>
+            }
             </MudList>
     </MudDrawer>
     <MudMainContent>

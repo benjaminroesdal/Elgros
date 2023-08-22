@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VsafTc6N9fbBuM0nGFKRlZSplghqJVZXlTROYY3Of08=",
+  "Hash": "i3hvYhk0MuPQvIDF3uR0J926H0VQlJsmFCxXcwTq2ak=",
   "Source": "ElgrosWeb.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Alexandar\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\6.0.20\\build\\net6.0\\blazor.webassembly.js"
+    },
+    {
+      "Identity": "C:\\Users\\Alexandar\\Documents\\GitHub\\Elgros\\ElgrosWeb\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll",
+      "SourceId": "ElgrosWeb.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Alexandar\\Documents\\GitHub\\Elgros\\ElgrosWeb\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.LocalStorage.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Alexandar\\.nuget\\packages\\blazored.localstorage\\4.4.0\\lib\\net6.0\\Blazored.LocalStorage.dll"
     },
     {
       "Identity": "C:\\Users\\Alexandar\\Documents\\GitHub\\Elgros\\ElgrosWeb\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\dotnet.6.0.21.ifk1oemhbg.js",
@@ -5693,6 +5710,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\Alexandar\\Documents\\GitHub\\Elgros\\ElgrosWeb\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Configuration.dll"
+    },
+    {
+      "Identity": "C:\\Users\\Alexandar\\Documents\\GitHub\\Elgros\\ElgrosWeb\\Client\\obj\\Debug\\net6.0\\build-gz\\OHNZK7TN.gz",
+      "SourceId": "ElgrosWeb.Client",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Alexandar\\Documents\\GitHub\\Elgros\\ElgrosWeb\\Client\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Blazored.LocalStorage.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "C:\\Users\\Alexandar\\Documents\\GitHub\\Elgros\\ElgrosWeb\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\Alexandar\\Documents\\GitHub\\Elgros\\ElgrosWeb\\Client\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Blazored.LocalStorage.dll"
     },
     {
       "Identity": "C:\\Users\\Alexandar\\Documents\\GitHub\\Elgros\\ElgrosWeb\\Client\\obj\\Debug\\net6.0\\build-gz\\OKbjOW+m.gz",

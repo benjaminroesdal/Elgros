@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "HStlKYKyI8LrNrNgPRMgC1nZes/o7852EnYAf/7IppHnRLlvXm9LL97gvnt25h2jFheLxqpx4eo1y2C7drLKhQ==",
+  "dgSpecHash": "1sbW+Qu6AWZXvUiT28SfMhvC+lcg619S68ewp1wVBazn5y+ZH759ebuBq3FL22+PUv+motmqie8cY9oPyEJhYQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Alexandar\\Documents\\GitHub\\Elgros\\ElgrosWeb\\Server\\ElgrosWeb.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alexandar\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Alexandar\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\Alexandar\\.nuget\\packages\\blazored.localstorage\\4.4.0\\blazored.localstorage.4.4.0.nupkg.sha512",
     "C:\\Users\\Alexandar\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Alexandar\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.20\\microsoft.aspnetcore.authorization.6.0.20.nupkg.sha512",
     "C:\\Users\\Alexandar\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.20\\microsoft.aspnetcore.components.6.0.20.nupkg.sha512",

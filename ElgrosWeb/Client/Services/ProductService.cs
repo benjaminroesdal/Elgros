@@ -13,13 +13,13 @@ public class ProductService
         _httpClient = httpClient;
     }
 
-    public async Task<List<Product>> GetProductsOnSubCategory(SubCategoryModel model)
+    public async Task<List<ProductModel>> GetProductsOnSubCategory(SubCategoryModel model)
     {
         var response = await _httpClient.PostAsJsonAsync("/api/Product/GetProductsOnSubCategory", model);
     
         if (response.IsSuccessStatusCode)
         {
-            var products = await response.Content.ReadFromJsonAsync<List<Product>>();
+            var products = await response.Content.ReadFromJsonAsync<List<ProductModel>>();
             return products;
         }
         else
@@ -28,5 +28,4 @@ public class ProductService
             throw new HttpRequestException($"Response code: {response.StatusCode}, Error: {await response.Content.ReadAsStringAsync()}");
         }
     }
-
 }

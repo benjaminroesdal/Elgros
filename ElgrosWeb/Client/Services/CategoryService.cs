@@ -20,8 +20,7 @@ public class CategoryService
     {
         try
         {
-            var response =
-                await _httpClient.GetFromJsonAsync<List<SubCategoryModel>>($"/api/Product/GetAllSubcategorys?category=VVS");
+            var response = await _httpClient.GetFromJsonAsync<List<SubCategoryModel>>($"/api/Product/GetAllSubcategorys?category={category}");
             return response ?? new List<SubCategoryModel>();
         }
         catch (Exception ex)

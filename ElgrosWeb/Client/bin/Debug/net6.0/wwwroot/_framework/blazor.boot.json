@@ -7,6 +7,7 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
+      "Blazored.LocalStorage.dll": "sha256-w2vMoqbIgF9UyzKqfDFXjqgg7IsGRHDvzb6DcyaPW6s=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-u3YI1z9+WYkzMnYZVJY7FxCR+SwmvycsqrxEJe\/+KdQ=",
       "Microsoft.AspNetCore.Components.dll": "sha256-SRGbF6QFgLGIr1L82S0pwdZ676zDEsdybsBfKWb\/Vzw=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-2Gr7ehRgVhAev11Ntgsx81qFKG1hVez4c8Lqxq0mc68=",
@@ -199,15 +200,15 @@
       "mscorlib.dll": "sha256-ZQiPq7CHB7vwsbgiGeI63xqAYmfnZVwKnCDxwIIfh68=",
       "netstandard.dll": "sha256-OUZMjYvE6WNC75Ypitp3ukl0+FlDbSW+OYEIsU7XlgQ=",
       "System.Private.CoreLib.dll": "sha256-uJANsJB4HA9iyaKf1ryCSbtypfL2uQZWxXKIn0Fz5+c=",
-      "ElgrosWeb.Shared.dll": "sha256-GGClGgreAWv87LdH7XepybzRAnlrRrYlLICkOejNtGQ=",
-      "ElgrosWeb.Client.dll": "sha256-UBO4NYQSuAUUm0GB3IpVKbUCy7H8fwppJYryCI\/oBQ0="
+      "ElgrosWeb.Shared.dll": "sha256-yC\/dLj4YPopxikagppoAJEeGFVjpmMgix4LnBIl9cqw=",
+      "ElgrosWeb.Client.dll": "sha256-PB9SLUcRHtF5sYlbOyEZ\/OaOx+chQRo9LhEYVZJuPUA="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "ElgrosWeb.Shared.pdb": "sha256-3pG7rCHpnsqrFqO24KMXuPKw7Y3Jf7lUjzwGhV7s6vI=",
-      "ElgrosWeb.Client.pdb": "sha256-4mEGcwgsQqhGeWQV1DIK88fs9Ll8k6r5vO8BGsyn6GY="
+      "ElgrosWeb.Shared.pdb": "sha256-WkpduCexzmB20K7UHLT9CeKT\/96xg+ywoozT7ZBq0yo=",
+      "ElgrosWeb.Client.pdb": "sha256-sI\/+lHfX0tvPO8tMbaRDC2dftsMeKqQai+9JXjIAQXc="
     },
     "runtime": {
       "dotnet.6.0.21.ifk1oemhbg.js": "sha256-0OV6gibFzyVtG7NXEj8a6vG3u8Cbzv4l9kkEathZjQ8=",

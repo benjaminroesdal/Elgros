@@ -21,5 +21,6 @@ namespace ElgrosWeb.Server.Facades
 
         public Task<List<SubCategoryModel>> GetSubCategorys(Category category)
             => _repository.GetSubCategorys(category);
+
     }
 }

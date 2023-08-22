@@ -2,6 +2,8 @@
 using ElgrosWeb.Shared.Enums;
 using ElgrosWeb.Shared.Models;
 using ElgrosWeb.Client.Services;
+using System.Text.Json;
+using System.Web;
 
 namespace ElgrosWeb.Client.Shared;
 
@@ -13,18 +15,43 @@ public partial class MainLayout
     
     protected override async Task OnInitializedAsync()
     {
-        SubCategories = await CategoryService.FetchSubCategories(Category.VVS);
-        var products = await ProductService.GetProductsOnSubCategory(SubCategories[0]);
+        foreach (Category category in Enum.GetValues(typeof(Category)))
+        {
+            var SubCategory = await CategoryService.FetchSubCategories(category);
+            SubCategories.AddRange(SubCategory);
+        }
+    }
 
-        Console.WriteLine(SubCategories);
-        Console.WriteLine(products);
-    }
-    
-    private Task HandleItemClick(SubCategoryModel subCategory)
+    // Method to handle SubCategoryModel
+    private void HandleItemClick(SubCategoryModel subCategory)
     {
-        throw new NotImplementedException();
+        if (subCategory != null)
+        {
+            var subCategoryJson = JsonSerializer.Serialize(subCategory);
+            var encodedSubCategory = HttpUtility.UrlEncode(subCategoryJson);
+            NavManager.NavigateTo($"/Product?subCategoryData={encodedSubCategory}");
+        }
+        else
+        {
+            throw new NotImplementedException("SubCategory handling is not implemented.");
+        }
     }
-    
+
+
+    // Method to handle Category
+    private void HandleItemClick(Category category)
+    {
+        if (category != default(Category))
+        {
+            NavManager.NavigateTo($"/TargetPageForCategory?category={category}");
+        }
+        else
+        {
+            throw new NotImplementedException("Category handling is not implemented.");
+        }
+    }
+
+
     void DrawerToggle()
     {
         _drawerOpen = !_drawerOpen;
