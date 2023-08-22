@@ -32,7 +32,7 @@ namespace ElgrosWeb.Server.Controllers
             return await _productFacade.GetCategoryProducts(Shared.Enums.Category.Electrical);
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("GetProductsOnSubCategory")]
         public async Task<List<ProductModel>> GetProductsSubCategory([FromBody] SubCategoryModel model)
         {

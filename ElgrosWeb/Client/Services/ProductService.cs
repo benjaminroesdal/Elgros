@@ -1,4 +1,8 @@
-﻿namespace ElgrosWeb.Client.Services;
+﻿using System.Net.Http.Json;
+using ElgrosWeb.Client.Pages;
+using ElgrosWeb.Shared.Models;
+
+namespace ElgrosWeb.Client.Services;
 
 public class ProductService
 {
@@ -8,4 +12,21 @@ public class ProductService
     {
         _httpClient = httpClient;
     }
+
+    public async Task<List<Product>> GetProductsOnSubCategory(SubCategoryModel model)
+    {
+        var response = await _httpClient.PostAsJsonAsync("/api/Product/GetProductsOnSubCategory", model);
+    
+        if (response.IsSuccessStatusCode)
+        {
+            var products = await response.Content.ReadFromJsonAsync<List<Product>>();
+            return products;
+        }
+        else
+        {
+            // Handle the error or throw an exception
+            throw new HttpRequestException($"Response code: {response.StatusCode}, Error: {await response.Content.ReadAsStringAsync()}");
+        }
+    }
+
 }

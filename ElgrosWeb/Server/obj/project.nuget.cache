@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "G47c2D/GwhExHKyyUBUrjDdAL2doxmahLWo6Xf2gWqA6F6U04UeLRHqg3lTwiKWWLdObpkBFbt49fzJAxjfqgQ==",
+  "dgSpecHash": "HStlKYKyI8LrNrNgPRMgC1nZes/o7852EnYAf/7IppHnRLlvXm9LL97gvnt25h2jFheLxqpx4eo1y2C7drLKhQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Alexandar\\Documents\\GitHub\\Elgros\\ElgrosWeb\\Server\\ElgrosWeb.Server.csproj",
   "expectedPackageFiles": [
@@ -93,11 +93,7 @@
     "C:\\Users\\Alexandar\\.nuget\\packages\\system.text.json\\7.0.2\\system.text.json.7.0.2.nupkg.sha512",
     "C:\\Users\\Alexandar\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\Alexandar\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\Alexandar\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512",
-    "C:\\Users\\Alexandar\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.15\\microsoft.netcore.app.ref.6.0.15.nupkg.sha512",
-    "C:\\Users\\Alexandar\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.15\\microsoft.windowsdesktop.app.ref.6.0.15.nupkg.sha512",
-    "C:\\Users\\Alexandar\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.15\\microsoft.aspnetcore.app.ref.6.0.15.nupkg.sha512",
-    "C:\\Users\\Alexandar\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.15\\microsoft.netcore.app.host.win-x64.6.0.15.nupkg.sha512"
+    "C:\\Users\\Alexandar\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

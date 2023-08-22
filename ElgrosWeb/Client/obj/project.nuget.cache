@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gmW5AZibxNAIp9pf5sOkeaU52hafmenX5aLBpRVHlOAvT5ON35oNLWMwnqPXMVMf3GzyFczoxgHJIq2H5H6F8A==",
+  "dgSpecHash": "U1LPSYNogNLl8HnTg7XovytyvajPmeO3HZmc6uLHrdago7wphMkj3MR2tyJPBjJ02ng8SZxZ6jhTFigA3wKxwQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Alexandar\\Documents\\GitHub\\Elgros\\ElgrosWeb\\Client\\ElgrosWeb.Client.csproj",
   "expectedPackageFiles": [
@@ -37,10 +37,7 @@
     "C:\\Users\\Alexandar\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\Alexandar\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\Alexandar\\.nuget\\packages\\system.text.json\\7.0.2\\system.text.json.7.0.2.nupkg.sha512",
-    "C:\\Users\\Alexandar\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.15\\microsoft.netcore.app.ref.6.0.15.nupkg.sha512",
-    "C:\\Users\\Alexandar\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.15\\microsoft.netcore.app.runtime.mono.browser-wasm.6.0.15.nupkg.sha512",
-    "C:\\Users\\Alexandar\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.15\\microsoft.windowsdesktop.app.ref.6.0.15.nupkg.sha512",
-    "C:\\Users\\Alexandar\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.15\\microsoft.aspnetcore.app.ref.6.0.15.nupkg.sha512"
+    "C:\\Users\\Alexandar\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.21\\microsoft.netcore.app.runtime.mono.browser-wasm.6.0.21.nupkg.sha512"
   ],
   "logs": []
 }

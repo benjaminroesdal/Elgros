@@ -1,6 +1,7 @@
 ﻿@using ElgrosWeb.Client.Services
 @inherits LayoutComponentBase
 @inject CategoryService CategoryService
+@inject ProductService ProductService
 <MudThemeProvider/>
 <MudDialogProvider/>
 <MudSnackbarProvider/>
@@ -16,6 +17,17 @@
     <MudDrawer @bind-Open="_drawerOpen" ClipMode="DrawerClipMode.Always" Elevation="3">
         <MudNavLink Href="/" Match="NavLinkMatch.All">Home</MudNavLink>
         <MudNavLink Href="/Product" Match="NavLinkMatch.Prefix">Product</MudNavLink>
+        <MudList Clickable="true">
+                <MudListSubheader>
+                    Nested List Items
+                </MudListSubheader>
+                @foreach(var subCategory in SubCategories)
+                    {
+                        <MudListItem Icon="@Icons.Material.Filled.Folder" Text="@subCategory.Name" @onclick="(() => HandleItemClick(subCategory))">
+                            <!-- You can include nested items or any other logic here if needed -->
+                        </MudListItem>
+                    }
+            </MudList>
     </MudDrawer>
     <MudMainContent>
         @Body
