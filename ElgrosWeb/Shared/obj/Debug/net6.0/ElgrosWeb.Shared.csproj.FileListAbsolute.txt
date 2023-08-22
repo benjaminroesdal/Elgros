@@ -9,15 +9,3 @@ C:\Users\benja\Documents\GitHub\Elgros\ElgrosWeb\Shared\obj\Debug\net6.0\ElgrosW
 C:\Users\benja\Documents\GitHub\Elgros\ElgrosWeb\Shared\obj\Debug\net6.0\refint\ElgrosWeb.Shared.dll
 C:\Users\benja\Documents\GitHub\Elgros\ElgrosWeb\Shared\obj\Debug\net6.0\ElgrosWeb.Shared.pdb
 C:\Users\benja\Documents\GitHub\Elgros\ElgrosWeb\Shared\obj\Debug\net6.0\ref\ElgrosWeb.Shared.dll
-C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Shared\bin\Debug\net6.0\ElgrosWeb.Shared.deps.json
-C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Shared\bin\Debug\net6.0\ElgrosWeb.Shared.dll
-C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Shared\bin\Debug\net6.0\ElgrosWeb.Shared.pdb
-C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Shared\obj\Debug\net6.0\ElgrosWeb.Shared.csproj.AssemblyReference.cache
-C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Shared\obj\Debug\net6.0\ElgrosWeb.Shared.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Shared\obj\Debug\net6.0\ElgrosWeb.Shared.AssemblyInfoInputs.cache
-C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Shared\obj\Debug\net6.0\ElgrosWeb.Shared.AssemblyInfo.cs
-C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Shared\obj\Debug\net6.0\ElgrosWeb.Shared.csproj.CoreCompileInputs.cache
-C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Shared\obj\Debug\net6.0\ElgrosWeb.Shared.dll
-C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Shared\obj\Debug\net6.0\refint\ElgrosWeb.Shared.dll
-C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Shared\obj\Debug\net6.0\ElgrosWeb.Shared.pdb
-C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Shared\obj\Debug\net6.0\ref\ElgrosWeb.Shared.dll

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34003.232
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElgrosWeb.Server", "Server\ElgrosWeb.Server.csproj", "{C3BC5FBE-16F4-427B-B6A6-692C0D6DEBCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElgrosWeb.Server", "Server\ElgrosWeb.Server.csproj", "{C3BC5FBE-16F4-427B-B6A6-692C0D6DEBCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElgrosWeb.Client", "Client\ElgrosWeb.Client.csproj", "{83AEA6C8-E3D5-4939-A84E-47D0D33CC0F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElgrosWeb.Client", "Client\ElgrosWeb.Client.csproj", "{83AEA6C8-E3D5-4939-A84E-47D0D33CC0F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElgrosWeb.Shared", "Shared\ElgrosWeb.Shared.csproj", "{C092558E-B052-4A17-A100-4B6DAB077F5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElgrosWeb.Shared", "Shared\ElgrosWeb.Shared.csproj", "{C092558E-B052-4A17-A100-4B6DAB077F5D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

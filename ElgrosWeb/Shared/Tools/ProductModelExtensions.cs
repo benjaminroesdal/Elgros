@@ -15,6 +15,8 @@ namespace ElgrosWeb.Shared.Tools
                 Brand = dao.Brand,
                 Category = dao.Category,
                 Price = dao.Price,
+                Image = dao.Image,
+                StockQuantity = dao.Quantity,
                 SubCategoryList = dao.SubCategoryList.CreateModelList()
             };
         }
@@ -29,6 +31,8 @@ namespace ElgrosWeb.Shared.Tools
                 Brand = model.Brand,
                 Category = model.Category,
                 Price = model.Price,
+                Image = model.Image,
+                Quantity = model.StockQuantity,
                 SubCategoryList = new List<SubCategoryDao>()
             };
         }

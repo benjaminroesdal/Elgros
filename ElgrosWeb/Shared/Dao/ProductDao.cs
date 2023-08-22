@@ -10,6 +10,8 @@ namespace ElgrosWeb.Shared.Dao
         public string Brand { get; set; }
         public Category Category { get; set; }
         public double Price { get; set; }
+        public string Image { get; set; }
+        public int Quantity { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime ModifiedAt { get; set; }
         public List<OrderDao> OrderList { get; set; }

@@ -5,7 +5,7 @@
       "url": "css\/app.css"
     },
     {
-      "hash": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7\/p4nS6D\/0=",
+      "hash": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=",
       "url": "css\/bootstrap\/bootstrap.min.css"
     },
     {
@@ -71,6 +71,10 @@
     {
       "hash": "sha256-w911bh9BL2oBBX5i8\/9opraJ+OGdg7W32ZRf4xxNH90=",
       "url": "ElgrosWeb.Client.styles.css"
+    },
+    {
+      "hash": "sha256-w2vMoqbIgF9UyzKqfDFXjqgg7IsGRHDvzb6DcyaPW6s=",
+      "url": "_framework\/Blazored.LocalStorage.dll"
     },
     {
       "hash": "sha256-u3YI1z9+WYkzMnYZVJY7FxCR+SwmvycsqrxEJe\/+KdQ=",
@@ -841,8 +845,8 @@
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
-      "hash": "sha256-fb2wBZaRp096nChMG9nDNEcW0kW1whA\/kfQNyH+5QpQ=",
-      "url": "_framework\/dotnet.6.0.15.tgk2hjqd5r.js"
+      "hash": "sha256-0OV6gibFzyVtG7NXEj8a6vG3u8Cbzv4l9kkEathZjQ8=",
+      "url": "_framework\/dotnet.6.0.21.yocstdpf1h.js"
     },
     {
       "hash": "sha256-qzglp3nbykfmnfsUz92dqiKN6QkhG7mKOOV4q9TztDs=",
@@ -869,19 +873,19 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-l\/I747delxZsLQ7DA5zQU7f66s+CIElxbH5bSzCA9UA=",
+      "hash": "sha256-whfP9HwIHADhYo5SuhU4iOuVYbq63dUxG61qeyHu96I=",
       "url": "_framework\/ElgrosWeb.Shared.dll"
     },
     {
-      "hash": "sha256-wpM5vfnQ4g0UwCpgxxDoUAzdsfypFYp39aEb2IQOaz8=",
+      "hash": "sha256-28Rd1M2n1x9qVQkXMPrgV4T05c0+ajw6iEcoSzrRhdg=",
       "url": "_framework\/ElgrosWeb.Shared.pdb"
     },
     {
-      "hash": "sha256-4fjdcejlvLau7uX4ie8C\/WkynhxvU0VRDeA9qHdYqHs=",
+      "hash": "sha256-IlM4yS5ipUefsVynJtE6v3ZjhrEsMzMsuZBwKLIEgbU=",
       "url": "_framework\/ElgrosWeb.Client.dll"
     },
     {
-      "hash": "sha256-196e3HVGZ0bijlBLe7EreryV6NuDIJmG5Xk\/toI8x5w=",
+      "hash": "sha256-RjL+TPkHSo71pre3Zl+UJI7M72\/raz1WIhmId1\/bsnk=",
       "url": "_framework\/ElgrosWeb.Client.pdb"
     },
     {
@@ -889,7 +893,7 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-+xEM40L5a6vJTvMCaudPCrN2dXXFv5Q2J0iQkOFmcZE=",
+      "hash": "sha256-MUXVtetxdZplmM3pz76cDo8iQsdIY3pfcONDTGgWmkc=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -901,5 +905,5 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "frHAijEr"
+  "version": "BJWAnrEk"
 };

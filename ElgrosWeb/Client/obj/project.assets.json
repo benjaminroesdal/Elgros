@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Blazored.LocalStorage/4.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Blazored.LocalStorage.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Blazored.LocalStorage.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/6.0.20": {
         "type": "package",
         "dependencies": {
@@ -567,6 +579,18 @@
       }
     },
     "net6.0/browser-wasm": {
+      "Blazored.LocalStorage/4.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Blazored.LocalStorage.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Blazored.LocalStorage.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/6.0.20": {
         "type": "package",
         "dependencies": {
@@ -1127,6 +1151,20 @@
     }
   },
   "libraries": {
+    "Blazored.LocalStorage/4.4.0": {
+      "sha512": "zuXZB4/WW3Pr1761peemffdkjt09lbOP1wAkSDTKl7BTbA9V5e8LxS6MNfmyHW+BJzXrNDq90E2Y+AfIfnIbWQ==",
+      "type": "package",
+      "path": "blazored.localstorage/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "blazored.localstorage.4.4.0.nupkg.sha512",
+        "blazored.localstorage.nuspec",
+        "icon.png",
+        "lib/net6.0/Blazored.LocalStorage.dll",
+        "lib/net7.0/Blazored.LocalStorage.dll"
+      ]
+    },
     "Microsoft.AspNetCore.Authorization/6.0.20": {
       "sha512": "6zKE0FO2K5XQHzvfirA2DZxRSKDWYpUayIBjw/E720/eDZgFeSacxxv+GS/UmeqOS/yKnXDqQt9GJ9dPuzrgRA==",
       "type": "package",
@@ -1955,6 +1993,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Blazored.LocalStorage >= 4.4.0",
       "ElgrosWeb.Shared >= 1.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly >= 6.0.20",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 6.0.20",
@@ -1962,19 +2001,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alexandar\\.nuget\\packages\\": {}
+    "C:\\Users\\benja\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alexandar\\Documents\\GitHub\\Elgros\\ElgrosWeb\\Client\\ElgrosWeb.Client.csproj",
+      "projectUniqueName": "C:\\Users\\benja\\Documents\\GitHub\\Elgros\\ElgrosWeb\\Client\\ElgrosWeb.Client.csproj",
       "projectName": "ElgrosWeb.Client",
-      "projectPath": "C:\\Users\\Alexandar\\Documents\\GitHub\\Elgros\\ElgrosWeb\\Client\\ElgrosWeb.Client.csproj",
-      "packagesPath": "C:\\Users\\Alexandar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alexandar\\Documents\\GitHub\\Elgros\\ElgrosWeb\\Client\\obj\\",
+      "projectPath": "C:\\Users\\benja\\Documents\\GitHub\\Elgros\\ElgrosWeb\\Client\\ElgrosWeb.Client.csproj",
+      "packagesPath": "C:\\Users\\benja\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\benja\\Documents\\GitHub\\Elgros\\ElgrosWeb\\Client\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Alexandar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\benja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1982,14 +2026,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Alexandar\\Documents\\GitHub\\Elgros\\ElgrosWeb\\Shared\\ElgrosWeb.Shared.csproj": {
-              "projectPath": "C:\\Users\\Alexandar\\Documents\\GitHub\\Elgros\\ElgrosWeb\\Shared\\ElgrosWeb.Shared.csproj"
+            "C:\\Users\\benja\\Documents\\GitHub\\Elgros\\ElgrosWeb\\Shared\\ElgrosWeb.Shared.csproj": {
+              "projectPath": "C:\\Users\\benja\\Documents\\GitHub\\Elgros\\ElgrosWeb\\Shared\\ElgrosWeb.Shared.csproj"
             }
           }
         }
@@ -2004,6 +2049,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Blazored.LocalStorage": {
+            "target": "Package",
+            "version": "[4.4.0, )"
+          },
           "Microsoft.AspNetCore.Components.WebAssembly": {
             "target": "Package",
             "version": "[6.0.20, )"
@@ -2031,20 +2080,8 @@
         "warn": true,
         "downloadDependencies": [
           {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.15, 6.0.15]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.15, 6.0.15]"
-          },
-          {
             "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
-            "version": "[6.0.15, 6.0.15]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.15, 6.0.15]"
+            "version": "[6.0.21, 6.0.21]"
           }
         ],
         "frameworkReferences": {
@@ -2052,7 +2089,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {
