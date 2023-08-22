@@ -92,6 +92,8 @@ namespace ElgrosWeb.Server.Data.Db
                             Price = 1234,
                             CreatedAt = DateTime.Now.AddDays(-2),
                             ModifiedAt = DateTime.Now,
+                            Quantity = 4,
+                            Image = "https://mediacache3.damixa.dk/v-638101502367755183/be/cf/eb83-6e6d-4173-b2af-b0320d33a141/67821.png",
                             SubCategoryList = ctx.SubCategory.Where(e => e.Name == "Vandhane").ToList()
                         },
                         new ProductDao()
@@ -103,6 +105,8 @@ namespace ElgrosWeb.Server.Data.Db
                             Price = 3245,
                             CreatedAt = DateTime.Now.AddDays(-5),
                             ModifiedAt = DateTime.Now,
+                            Quantity = 7,
+                            Image = "https://w7.pngwing.com/pngs/557/668/png-transparent-squat-toilet-plumbing-fixtures-flush-toilet-stainless-steel-tolet-angle-toilet-steel.png",
                             SubCategoryList = ctx.SubCategory.Where(e => e.Name == "Toilet").ToList()
                         },
                         new ProductDao()
@@ -114,6 +118,8 @@ namespace ElgrosWeb.Server.Data.Db
                             Price = 432,
                             CreatedAt = DateTime.Now.AddDays(-20),
                             ModifiedAt = DateTime.Now,
+                            Quantity = 2,
+                            Image = "https://w7.pngwing.com/pngs/251/403/png-transparent-copper-pipe-bronze-welding-others-material-metal-industry.png",
                             SubCategoryList = ctx.SubCategory.Where(e => e.Name == "Afløbsrør").ToList()
                         },
                         new ProductDao()
@@ -125,6 +131,8 @@ namespace ElgrosWeb.Server.Data.Db
                             Price = 52000,
                             CreatedAt = DateTime.Now.AddDays(-14),
                             ModifiedAt = DateTime.Now,
+                            Quantity = 14,
+                            Image = "https://w7.pngwing.com/pngs/640/655/png-transparent-golden-retriever-washing-machine-tap-golden-drum-washing-machine-household-golden-frame-bathroom-thumbnail.png",
                             SubCategoryList = ctx.SubCategory.Where(e => e.Name == "Vaskemaskine").ToList()
                         },
                         new ProductDao()
@@ -136,6 +144,8 @@ namespace ElgrosWeb.Server.Data.Db
                             Price = 720,
                             CreatedAt = DateTime.Now.AddDays(-23),
                             ModifiedAt = DateTime.Now,
+                            Quantity = 22,
+                            Image = "https://www.svedbergs.dk/globalassets/svedbergsimport/images/575/575450.png",
                             SubCategoryList = ctx.SubCategory.Where(e => e.Name == "Blandingsbatteri").ToList()
                         },
                         new ProductDao()
@@ -147,6 +157,8 @@ namespace ElgrosWeb.Server.Data.Db
                             Price = 9384,
                             CreatedAt = DateTime.Now.AddDays(-4),
                             ModifiedAt = DateTime.Now,
+                            Quantity = 32,
+                            Image = "https://thebidetshop.com.au/wp-content/uploads/2022/07/prince-king.png",
                             SubCategoryList = ctx.SubCategory.Where(e => e.Name == "Toilet").ToList()
                         },
                         new ProductDao()
@@ -158,6 +170,8 @@ namespace ElgrosWeb.Server.Data.Db
                             Price = 21003,
                             CreatedAt = DateTime.Now.AddDays(-41),
                             ModifiedAt = DateTime.Now,
+                            Quantity = 1,
+                            Image = "https://www.elvandvarmer.dk/wp-content/uploads/2022/09/Eltavle-1-scaled.jpg",
                             SubCategoryList = ctx.SubCategory.Where(e => e.Name == "Eltavle").ToList()
                         },
                         new ProductDao()
@@ -169,6 +183,8 @@ namespace ElgrosWeb.Server.Data.Db
                             Price = 120,
                             CreatedAt = DateTime.Now.AddDays(-19),
                             ModifiedAt = DateTime.Now,
+                            Quantity = 51,
+                            Image = "https://medieserver.jemogfix.dk/fotoweb/dk/varer/700/7110%209000093.jpg",
                             SubCategoryList = ctx.SubCategory.Where(e => e.Name == "Stikdåse").ToList()
                         },
                         new ProductDao()
@@ -180,6 +196,8 @@ namespace ElgrosWeb.Server.Data.Db
                             Price = 14500,
                             CreatedAt = DateTime.Now.AddDays(-14),
                             ModifiedAt = DateTime.Now,
+                            Quantity = 3,
+                            Image = "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6196/6196192_sd.jpg",
                             SubCategoryList = ctx.SubCategory.Where(e => e.Name == "Køleskab").ToList()
                         },
                     },

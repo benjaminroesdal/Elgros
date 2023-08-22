@@ -22,7 +22,7 @@ namespace ElgrosWeb.Server.Repositories
             List<ProductDao> products;
             using (var context = _context)
             {
-                products = await context.Product.Where(e => e.Category.Equals(productCategory)).ToListAsync();
+                products = await context.Product.Include(e => e.SubCategoryList).Where(e => e.Category.Equals(productCategory)).ToListAsync();
             }
             return products.CreateModelList();
         }
@@ -32,7 +32,7 @@ namespace ElgrosWeb.Server.Repositories
             List<ProductDao> products;
             using (var context = _context)
             {
-                products = await context.Product.Where(e => e.SubCategoryList.Any(e => e.Id == subCategoryId)).ToListAsync();
+                products = await context.Product.Include(e => e.SubCategoryList).Where(e => e.SubCategoryList.Any(e => e.Id == subCategoryId)).ToListAsync();
             }
             return products.CreateModelList();
         }
