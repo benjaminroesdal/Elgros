@@ -9,5 +9,7 @@
         public DateTime CreatedAt { get; set; }
         public DateTime ModifiedAt { get; set;}
         public PaymentDao PaymentDetails { get; set; }
+        public bool HasAcceptedPolicies { get; set; }
+        public bool HomeDelivery { get; set; }
     }
 }

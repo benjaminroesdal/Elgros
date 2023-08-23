@@ -1,72 +1,156 @@
 ﻿@using System.Text.RegularExpressions
 @using System.ComponentModel.DataAnnotations
+@using ElgrosWeb.Client.Services;
+@using ElgrosWeb.Shared.Enums;
 @inject StateContainer stateContainer
+@inject OrderService orderService
+@inject Blazored.LocalStorage.ILocalStorageService localStore
 @page "/Order"
 
 <h3>Order</h3>
-<MudGrid>
-    <MudItem xs="12" sm="7">
-        <MudPaper Class="pa-4">
-            <MudForm @ref="form" @bind-IsValid="@success" @bind-Errors="@errors">
-                <MudTextField T="string" Label="Navn" Required="true" RequiredError="Navn er påkrævet!" />
-                <MudTextField T="string" Label="Adresse" Required="true" RequiredError="Add!"/>
-                <MudTextField T="string" Label="PostNr."/>
-                <MudTextField T="string" Label="By"/>
-                <MudTextField T="string" Label="Land"/>
-                <MudTextField T="string" Label="Telefon"/>
-                <MudTextField T="string" Label="E-mail" Required="true" RequiredError="Email is required!"
-                              Validation="@(new EmailAddressAttribute() {ErrorMessage = "Email adressen er ikke gyldig"})" />
-                <MudTextField T="string" Label="Bekræft email" Required="true" RequiredError="Email is required!"
-                              Validation="@(new EmailAddressAttribute() {ErrorMessage = "Email adressen er ikke gyldig"})" />
-                <div class="d-flex">
-                    <MudRadioGroup T="string" Required="true" RequiredError="Account type is required!">
-                        <MudRadio Option="@("Personal")">Personal</MudRadio>
-                        <MudRadio Option="@("Professional")">Professional</MudRadio>
-                    </MudRadioGroup>
-                </div>
-                <div class="d-flex align-center justify-space-between">
-                    <MudCheckBox T="bool" Required="true" RequiredError="You must agree" Label="I agree!" />
-                    <MudButton Variant="Variant.Filled" Color="Color.Primary" Disabled="@(!success)" Class="ml-auto">Register</MudButton>
-                </div>
-            </MudForm>
-        </MudPaper>
-        <MudPaper Class="pa-4 mt-4">
-            <MudButton Variant="Variant.Filled" Color="Color.Primary" DisableElevation="true" OnClick="@(()=>form.Validate())">Validate</MudButton>
-            <MudButton Variant="Variant.Filled" Color="Color.Secondary" DisableElevation="true" OnClick="@(()=>form.ResetAsync())" Class="mx-2">Reset</MudButton>
-            <MudButton Variant="Variant.Filled" DisableElevation="true" OnClick="@(()=>form.ResetValidation())">Reset Validation</MudButton>
-        </MudPaper>
-    </MudItem>
-</MudGrid>
+<MudExpansionPanels>
+    <MudExpansionPanel Text="1. Mine oplysninger" IsExpanded="showPersonalDetails" Disabled="!showPersonalDetails">
+        <MudItem xs="12" sm="7">
+            <MudPaper Class="pa-4">
+                <MudForm @ref="form" @bind-IsValid="@success" @bind-Errors="@errors">
+                    <MudTextField T="string" Label="Navn" Required="true" RequiredError="Navn er påkrævet!" @bind-Value="stateContainer.Order.User.FirstName" />
+                    <MudTextField T="string" Label="Efternavn" Required="true" RequiredError="Navn er påkrævet!" @bind-Value="stateContainer.Order.User.LastName" />
+                    <MudTextField T="string" Label="Adresse" Required="true" RequiredError="Add!" @bind-Value="stateContainer.Order.User.Address"/>
+                    <MudTextField T="string" Label="PostNr." @bind-Value="stateContainer.Order.User.PostalCode" />
+                    <MudTextField T="string" Label="By" @bind-Value="stateContainer.Order.User.City" />
+                    <MudTextField T="string" Label="Telefon" @bind-Value="stateContainer.Order.User.PhoneNumber" />
+                    <MudTextField T="string" Label="E-mail" Required="true" RequiredError="Email is required!"
+                                  Validation="@(new EmailAddressAttribute() {ErrorMessage = "Email adressen er ikke gyldig"})" @bind-Value="stateContainer.Order.User.Email" />
+                    <MudTextField T="string" Label="Bekræft email" Required="true" RequiredError="Email is required!"
+                                  Validation="@(new EmailAddressAttribute() {ErrorMessage = "Email adressen er ikke gyldig"})" />
+                </MudForm>
+            </MudPaper>
+            <MudPaper Class="pa-4 mt-4">
+                <MudButton Variant="Variant.Filled" Color="Color.Success" DisableElevation="true" OnClick="PersonalDetailsFilled">Næste</MudButton>
+            </MudPaper>
+        </MudItem>
+    </MudExpansionPanel>
+    <MudExpansionPanel Text="2. Handelsbetingelser og persondatapolitik" MaxHeight="500" IsExpanded="showPolicies" Disabled="!showPolicies">
+        <MudText>For at du kan handle ved Elgros, skal du acceptere vores handelsbetingelser og vores persondatapolitik.</MudText>
+        <MudText>Du kan læse mere om disse ved at klikke på de to links nedenfor.</MudText>
+        <MudLink><MudText>Klik her for at læse vores handelsbetingelser</MudText></MudLink>
+        <MudLink><MudText>Klik her for at læse vores persondatapolitik</MudText></MudLink>
+        <MudButton Variant="Variant.Filled" Color="Color.Success" DisableElevation="true" OnClick="PoliciesAcceptedFilled">Jeg accepterer Elgros' betingelser</MudButton>
+    </MudExpansionPanel>
+    <MudExpansionPanel Text="3. Vælg leveringsmetode" MaxHeight="1000" IsExpanded="showDelivery" Disabled="!showDelivery">
+        <MudRadioGroup T="int">
+            <MudRadio Option="1" UnCheckedColor="Color.Default">Afhentning i varehus - Elgrosvej 12, 4200 Slagelse</MudRadio>
+            <MudRadio Option="2" UnCheckedColor="Color.Default">Postnord - Levering til døren</MudRadio>
+        </MudRadioGroup>
+        <MudButton Variant="Variant.Filled" Color="Color.Success" DisableElevation="true" OnClick="DeliveryFilled">Næste</MudButton>
+    </MudExpansionPanel>
+    <MudExpansionPanel Text="4. Vælg betalingsmetode" Disabled="!showPayment" IsExpanded="showPayment">
+       <MudGrid>
+           <MudItem>
+                <MudImage Width="200" Height="100" Src="https://www.laanekassen.dk/wp-content/uploads/2017/08/visa.jpg"></MudImage>
+           </MudItem>
+            <MudItem>
+                <MudText Typo="Typo.h5">VISA / VISA Dankort</MudText>
+                <MudText>Sikker betaling. Godkendelse med SMS. Gebyr på erhvervskort samt korttyper udstedt udenfor EU: op til 1,55%</MudText>
+            </MudItem>
+            <MudItem>
+                <MudButton Variant="Variant.Filled" Color="Color.Success" DisableElevation="true" OnClick="() => ExecutePayment()">Betal</MudButton>
+            </MudItem>
+            <MudItem>
+                <MudCard Outlined="true">
+                    <MudCardContent>
+                        <MudText Typo="Typo.h5">Min indkøbskurv</MudText>
+                        @foreach (var item in stateContainer.BasketItems)
+                        {
+                            <MudText Typo="Typo.h6">@item.Product.Name</MudText>
+                            <MudText Typo="Typo.body2">Pris : @item.Product.Price</MudText>
+                            <MudText Typo="Typo.body2">Antal : @item.Quantity</MudText>
+                        }
+                        <MudText Typo="Typo.body1">Fragt : 50kr</MudText>
+                        <MudText Typo="Typo.h5">Total beløb : @GetTotalBasketAmount()</MudText>
+                    </MudCardContent>
+                </MudCard>
+                <MudProgressCircular Color="Color.Success" Indeterminate="paymentInProgress"/>
+            </MudItem>
+       </MudGrid>
+    </MudExpansionPanel>
+</MudExpansionPanels>
 
 
 @code {
+    private Timer timer;
+    bool showPersonalDetails = true;
+    bool showPolicies = false;
+    bool showDelivery = false;
+    bool showPayment = false;
+    bool paymentInProgress = false;
+
     bool success;
     string[] errors = { };
     MudTextField<string> pwField1;
     MudForm form;
 
-    private IEnumerable<string> PasswordStrength(string pw)
+    protected override void OnInitialized()
     {
-        if (string.IsNullOrWhiteSpace(pw))
+        stateContainer.OnChange += StateHasChanged;
+    }
+
+    public void PersonalDetailsFilled()
+    {
+        showPersonalDetails = false;
+        showPolicies = true;
+    }
+
+    public void PoliciesAcceptedFilled()
+    {
+        stateContainer.Order.HasAcceptedPolicies = true;
+        showPolicies = false;
+        showDelivery = true;
+    }
+
+    public void DeliveryFilled()
+    {
+        showDelivery = false;
+        showPayment = true;
+    }
+
+    public async void ExecutePayment()
+    {
+        paymentInProgress = true;
+        await Task.Delay(4000);
+
+        stateContainer.Order.PaymentDetails.Provider = "VISA";
+        stateContainer.Order.PaymentDetails.Status = PaymentStatus.Success;
+        stateContainer.Order.Products = CreateProductList(stateContainer.BasketItems);
+        stateContainer.Order.TotalAmount = GetTotalBasketAmount();
+        await orderService.PostOrder(stateContainer.Order);
+        stateContainer.ResetState();
+        await localStore.ClearAsync();
+        paymentInProgress = false;
+        StateHasChanged();
+
+    }
+
+    private List<ProductModel> CreateProductList(List<BasketItemModel> basketItems)
+    {
+        List<ProductModel> productList = new List<ProductModel>();
+        foreach (var item in basketItems)
         {
-            yield return "Password is required!";
-            yield break;
+            for (int i = 0; i < item.Quantity; i++)
+            {
+                productList.Add(item.Product);
+            }
         }
-        if (pw.Length < 8)
-            yield return "Password must be at least of length 8";
-        if (!Regex.IsMatch(pw, @"[A-Z]"))
-            yield return "Password must contain at least one capital letter";
-        if (!Regex.IsMatch(pw, @"[a-z]"))
-            yield return "Password must contain at least one lowercase letter";
-        if (!Regex.IsMatch(pw, @"[0-9]"))
-            yield return "Password must contain at least one digit";
+        return productList;
     }
 
-    private string PasswordMatch(string arg)
+    public double GetTotalBasketAmount()
     {
-        if (pwField1.Value != arg)
-            return "Passwords don't match";
-        return null;
+        double totalAmount = 0;
+        foreach (var item in stateContainer.BasketItems)
+        {
+            totalAmount = item.Product.Price * item.Quantity + totalAmount;
+        }
+        return totalAmount;
     }
-
 }

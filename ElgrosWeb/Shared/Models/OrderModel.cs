@@ -16,5 +16,7 @@ namespace ElgrosWeb.Shared.Models
         public DateTime CreatedAt { get; set; }
         public DateTime ModifiedAt { get; set; }
         public PaymentModel PaymentDetails { get; set; }
+        public bool HasAcceptedPolicies { get; set; }
+        public bool  HomeDelivery { get; set; }
     }
 }

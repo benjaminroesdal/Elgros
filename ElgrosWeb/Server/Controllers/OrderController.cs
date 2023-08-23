@@ -25,7 +25,7 @@ namespace ElgrosWeb.Server.Controllers
 
         [HttpPost]
         [Route("PostOrder")]
-        public async Task<OrderModel> CreateOrder(OrderModel orderModel)
+        public async Task<OrderModel> CreateOrder([FromBody] OrderModel orderModel)
         {
             return await _orderFacade.CreateOrder(orderModel);
         }

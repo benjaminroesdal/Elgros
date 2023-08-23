@@ -51,7 +51,6 @@
         </TemplateColumn>
     </Columns>
 </MudDataGrid>
-<button>Add Item</button>
 
 @code {
     double totalBasketPrice;
@@ -65,7 +64,11 @@
     {
         if (firstRender)
         {
-            stateContainer.BasketItems = await localStore.GetItemAsync<List<BasketItemModel>>("localStore_BasketItems");
+            var items = await TryGetLocalStorage();
+            if (items != null && items.Any())
+            {
+                stateContainer.BasketItems = items;
+            }
             StateHasChanged();
         }
     }
@@ -129,5 +132,16 @@
     {
         var totalTaxAmount = ((double)totalBasketPrice / 100) * 25;
         return Math.Round(totalTaxAmount, 2, MidpointRounding.AwayFromZero);
+    }
+
+    private async Task<List<BasketItemModel>> TryGetLocalStorage()
+    {
+        List<BasketItemModel> items = new List<BasketItemModel>();
+        try
+        {
+            items = await localStore.GetItemAsync<List<BasketItemModel>>("localStore_BasketItems");
+        }
+        catch (Exception){}
+        return items;
     }
 }

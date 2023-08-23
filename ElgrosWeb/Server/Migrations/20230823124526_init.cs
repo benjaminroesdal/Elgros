@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ElgrosWeb.Server.Migrations
 {
     /// <inheritdoc />
-    public partial class Init : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -72,7 +72,10 @@ namespace ElgrosWeb.Server.Migrations
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PostalCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    City = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ModifiedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -115,7 +118,9 @@ namespace ElgrosWeb.Server.Migrations
                     TotalAmount = table.Column<double>(type: "float", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ModifiedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    PaymentDetailsId = table.Column<int>(type: "int", nullable: false)
+                    PaymentDetailsId = table.Column<int>(type: "int", nullable: false),
+                    HasAcceptedPolicies = table.Column<bool>(type: "bit", nullable: false),
+                    HomeDelivery = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {

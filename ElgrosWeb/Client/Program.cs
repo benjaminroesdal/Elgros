@@ -15,6 +15,7 @@ builder.Services.AddScoped<StateContainer>();
 //Services
 builder.Services.AddScoped<CategoryService>();
 builder.Services.AddScoped<ProductService>();
+builder.Services.AddScoped<OrderService>();
 
 
 builder.RootComponents.Add<HeadOutlet>("head::after");

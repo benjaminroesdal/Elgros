@@ -76,11 +76,16 @@ namespace ElgrosWeb.Server.Data.Db
                     {
                         FirstName = "Lars",
                         LastName = "Larsen",
-                        Address = "Larsensvej 10 4200 Slagelse",
+                        Address = "Larsensvej 10",
+                        City = "Slagelse",
+                        PostalCode = "4200",
+                        Email = "larsenlars@hotmail.com",
                         PhoneNumber = "+4525994723",
                         CreatedAt = DateTime.Now.AddDays(-2),
                         ModifiedAt = DateTime.Now,
                     },
+                    HasAcceptedPolicies = false,
+                    HomeDelivery = false,
                     Products = new List<ProductDao>()
                     {
                         new ProductDao()

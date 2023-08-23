@@ -14,6 +14,9 @@ namespace ElgrosWeb.Shared.Tools
                 LastName = dao.LastName,
                 Address = dao.Address,
                 PhoneNumber = dao.PhoneNumber,
+                PostalCode = dao.PostalCode,
+                City = dao.City,
+                Email = dao.Email,
             };
         }
 
@@ -25,7 +28,10 @@ namespace ElgrosWeb.Shared.Tools
                 FirstName = model.FirstName,
                 LastName = model.LastName,
                 Address = model.Address,
-                PhoneNumber = model.PhoneNumber
+                PhoneNumber = model.PhoneNumber,
+                PostalCode= model.PostalCode,
+                City = model.City,
+                Email = model.Email,
             };
         }
     }

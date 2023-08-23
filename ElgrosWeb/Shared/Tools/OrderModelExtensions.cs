@@ -13,7 +13,9 @@ namespace ElgrosWeb.Shared.Tools
                 User = orderDao.User.CreateModel(),
                 Products = orderDao.Products.CreateModelList(),
                 TotalAmount = orderDao.TotalAmount,
-                PaymentDetails = orderDao.PaymentDetails.CreateModel()
+                PaymentDetails = orderDao.PaymentDetails.CreateModel(),
+                HasAcceptedPolicies = orderDao.HasAcceptedPolicies,
+                HomeDelivery = orderDao.HomeDelivery,
             };
         }
 
@@ -25,7 +27,9 @@ namespace ElgrosWeb.Shared.Tools
                 User = orderModel.User.CreateDao(),
                 Products = orderModel.Products.CreateDaoList(),
                 TotalAmount = orderModel.TotalAmount,
-                PaymentDetails = orderModel.PaymentDetails.CreateDao()
+                PaymentDetails = orderModel.PaymentDetails.CreateDao(),
+                HasAcceptedPolicies = orderModel.HasAcceptedPolicies,
+                HomeDelivery = orderModel.HomeDelivery,
             };
         }
     }

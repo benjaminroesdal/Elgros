@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ElgrosWeb.Server.Migrations
 {
     [DbContext(typeof(ElgrosContext))]
-    [Migration("20230822123615_Init")]
-    partial class Init
+    [Migration("20230823124526_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -35,6 +35,12 @@ namespace ElgrosWeb.Server.Migrations
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
+
+                    b.Property<bool>("HasAcceptedPolicies")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("HomeDelivery")
+                        .HasColumnType("bit");
 
                     b.Property<DateTime>("ModifiedAt")
                         .HasColumnType("datetime2");
@@ -163,8 +169,16 @@ namespace ElgrosWeb.Server.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
@@ -178,6 +192,10 @@ namespace ElgrosWeb.Server.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PostalCode")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
