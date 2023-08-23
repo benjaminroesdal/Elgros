@@ -51,6 +51,10 @@ public partial class MainLayout
         }
     }
 
+    private void HandleBasketClick()
+    {
+        NavManager.NavigateTo("/Basket");
+    }
 
     void DrawerToggle()
     {

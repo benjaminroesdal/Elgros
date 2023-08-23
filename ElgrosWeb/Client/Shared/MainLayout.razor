@@ -15,7 +15,7 @@
         <MudText Typo="Typo.h5" Class="ml-3">Elgros</MudText>
         <MudSpacer/>
         <MudTextField Label="Outlined" T="string" Variant="Variant.Outlined"></MudTextField>
-        <MudIconButton Icon="@Icons.Material.Filled.ShoppingBasket" Color="Color.Inherit" Edge="Edge.End"/>
+        <MudIconButton Icon="@Icons.Material.Filled.ShoppingBasket" Color="Color.Inherit" Edge="Edge.End" OnClick="HandleBasketClick" />
     </MudAppBar>
     <MudDrawer @bind-Open="_drawerOpen" ClipMode="DrawerClipMode.Always" Elevation="3">
         <MudList Clickable="true">

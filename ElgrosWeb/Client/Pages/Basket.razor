@@ -37,7 +37,7 @@
         </TemplateColumn>
         <TemplateColumn>
             <CellTemplate>
-                <MudFab OnClick="() => RemoveFromBasket(context.Item.Product.Id)" Size="Size.Small" Color="Color.Error" StartIcon="@Icons.Material.Filled.Delete" Disabled="false" />
+                <MudFab OnClick="() => ClearItemFromBasket(context.Item.Product.Id)" Size="Size.Small" Color="Color.Error" StartIcon="@Icons.Material.Filled.Delete" Disabled="false" />
             </CellTemplate>
         </TemplateColumn>
         <TemplateColumn>
