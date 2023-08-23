@@ -9,37 +9,37 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = ElgrosWeb.Client
 build_property.RootNamespace = ElgrosWeb.Client
-build_property.ProjectDir = C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Client\
+build_property.ProjectDir = C:\Users\benja\Documents\GitHub\Elgros\ElgrosWeb\Client\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Alexandar\Documents\GitHub\Elgros\ElgrosWeb\Client
+build_property.MSBuildProjectDirectory = C:\Users\benja\Documents\GitHub\Elgros\ElgrosWeb\Client
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Alexandar/Documents/GitHub/Elgros/ElgrosWeb/Client/App.razor]
+[C:/Users/benja/Documents/GitHub/Elgros/ElgrosWeb/Client/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alexandar/Documents/GitHub/Elgros/ElgrosWeb/Client/Pages/Basket.razor]
+[C:/Users/benja/Documents/GitHub/Elgros/ElgrosWeb/Client/Pages/Basket.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmFza2V0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alexandar/Documents/GitHub/Elgros/ElgrosWeb/Client/Pages/Index.razor]
+[C:/Users/benja/Documents/GitHub/Elgros/ElgrosWeb/Client/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alexandar/Documents/GitHub/Elgros/ElgrosWeb/Client/Pages/Order.razor]
+[C:/Users/benja/Documents/GitHub/Elgros/ElgrosWeb/Client/Pages/Order.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alexandar/Documents/GitHub/Elgros/ElgrosWeb/Client/Pages/Product.razor]
+[C:/Users/benja/Documents/GitHub/Elgros/ElgrosWeb/Client/Pages/Product.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alexandar/Documents/GitHub/Elgros/ElgrosWeb/Client/_Imports.razor]
+[C:/Users/benja/Documents/GitHub/Elgros/ElgrosWeb/Client/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Alexandar/Documents/GitHub/Elgros/ElgrosWeb/Client/Shared/MainLayout.razor]
+[C:/Users/benja/Documents/GitHub/Elgros/ElgrosWeb/Client/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-yxpf54yvof
