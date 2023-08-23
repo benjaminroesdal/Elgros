@@ -43,18 +43,32 @@ namespace ElgrosWeb.Client.Pages
             var encodedSubCategoryData = queryParameters.Get("subCategoryData");
             var decodedSubCategoryData = HttpUtility.UrlDecode(encodedSubCategoryData);
 
-            SubCategoryModel subCategory = JsonSerializer.Deserialize<SubCategoryModel>(decodedSubCategoryData);
+            SubCategoryModel subCategory = null;
+
+            // Check if decodedSubCategoryData contains data before deserializing
+            if (!string.IsNullOrWhiteSpace(decodedSubCategoryData))
+            {
+                try
+                {
+                    subCategory = JsonSerializer.Deserialize<SubCategoryModel>(decodedSubCategoryData);
+                }
+                catch (JsonException ex)
+                {
+                    // Handle deserialization error
+                    Console.WriteLine($"Failed to deserialize sub-category data: {ex.Message}");
+                }
+            }
 
             var categoryString = queryParameters.Get("category");
 
-            if (encodedSubCategoryData != null)
+            if (subCategory != null)
             {
                 // SubCategory
                 Console.WriteLine(encodedSubCategoryData);
                 products = await ProductService.GetProductsOnSubCategory(subCategory);
                 Console.WriteLine(products[0].Name);
             }
-            else if (categoryString != null)
+            else if (!string.IsNullOrWhiteSpace(categoryString))
             {
                 // Category
                 var category = Enum.Parse<Category>(categoryString);
@@ -66,6 +80,7 @@ namespace ElgrosWeb.Client.Pages
                 // Neither a valid SubCategory nor Category, handle appropriately.
             }
         }
+
 
         public async void AddToBasket(ProductModel product)
         {
