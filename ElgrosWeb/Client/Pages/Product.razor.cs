@@ -9,7 +9,6 @@ namespace ElgrosWeb.Client.Pages
     public partial class Product
     {
         List<ProductModel> products = new List<ProductModel>();
-
         protected override async Task OnInitializedAsync()
         {
             NavManager.LocationChanged += async (sender, e) => await HandleLocationChanged(sender, e);
@@ -26,7 +25,6 @@ namespace ElgrosWeb.Client.Pages
         {
             StateHasChanged();
         }
-
 
         protected override async Task OnParametersSetAsync()
         {
@@ -63,16 +61,12 @@ namespace ElgrosWeb.Client.Pages
             if (subCategory != null)
             {
                 // SubCategory
-                Console.WriteLine(encodedSubCategoryData);
                 products = await ProductService.GetProductsOnSubCategory(subCategory);
-                Console.WriteLine(products[0].Name);
             }
             else if (!string.IsNullOrWhiteSpace(categoryString))
             {
                 // Category
                 var category = Enum.Parse<Category>(categoryString);
-                Console.WriteLine(category);
-                // Fetch or process products for the category as needed.
             }
             else
             {
@@ -93,6 +87,16 @@ namespace ElgrosWeb.Client.Pages
             stateContainer.BasketItems.Add(new BasketItemModel() { Product = product, Quantity = 1 });
             await localStore.SetItemAsync("localStore_BasketItems", stateContainer.BasketItems);
             StateHasChanged();
+        }
+
+        public void SelectProduct(ProductModel product)
+        {
+            if (true)
+            {
+                var subCategoryJson = JsonSerializer.Serialize(product);
+                var encodedSubCategory = HttpUtility.UrlEncode(subCategoryJson);
+                NavManager.NavigateTo($"/SingleProduct?product={encodedSubCategory}");
+            }
         }
     }
 }

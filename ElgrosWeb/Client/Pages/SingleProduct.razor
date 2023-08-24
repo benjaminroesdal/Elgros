@@ -1,0 +1,27 @@
+﻿@page "/SingleProduct"
+@using ElgrosWeb.Client.Services;
+@inject NavigationManager NavManager
+@inject ISnackbar Snackbar
+@inject Blazored.LocalStorage.ILocalStorageService localStore
+@inject NavigationManager NavManager
+@inject StateContainer stateContainer
+@inject ProductService ProductService
+
+<MudCard Style="height=100%;">
+    <MudCardHeader>
+        <CardHeaderContent>
+            <MudText Typo="Typo.body1">@product.Brand</MudText>
+            <MudText Typo="Typo.body2">@product.Name</MudText>
+        </CardHeaderContent>
+    </MudCardHeader>
+    <MudCardMedia Image="@product.Image" />
+    <MudCardContent>
+        <MudText Typo="Typo.body2">@product.Description</MudText>
+    </MudCardContent>
+    <MudCardActions>
+        <MudText>@product.Price.ToString("C")</MudText>
+        <MudIconButton Icon="@Icons.Material.Filled.ShoppingBag" OnClick="@(() => AddToBasket(product))" Color="Color.Primary"/>
+    </MudCardActions>
+</MudCard>
+
+
