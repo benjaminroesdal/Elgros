@@ -4,6 +4,7 @@
 @inject CategoryService CategoryService
 @inject ProductService ProductService
 @inject NavigationManager NavManager
+@inject StateContainer StateContainer
 
 <MudThemeProvider/>
 <MudDialogProvider/>
@@ -15,7 +16,9 @@
         <MudText Typo="Typo.h5" Class="ml-3">Elgros</MudText>
         <MudSpacer/>
         <MudTextField Label="Outlined" T="string" Variant="Variant.Outlined"></MudTextField>
-        <MudIconButton Icon="@Icons.Material.Filled.ShoppingBasket" Color="Color.Inherit" Edge="Edge.End" OnClick="HandleBasketClick" />
+        <MudBadge Content="StateContainer.BasketItems.Count" Color="Color.Primary" Overlap="true" Class="mx-6 my-4">
+            <MudIconButton Icon="@Icons.Material.Filled.ShoppingBasket" Color="Color.Inherit" Edge="Edge.End" OnClick="HandleBasketClick" />
+        </MudBadge>
     </MudAppBar>
     <MudDrawer @bind-Open="_drawerOpen" ClipMode="DrawerClipMode.Always" Elevation="3">
         <MudList Clickable="true">

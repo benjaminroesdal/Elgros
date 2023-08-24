@@ -1,0 +1,61 @@
+﻿@using ElgrosWeb.Client.Services;
+@page "/order-details/{orderId}"
+@inject OrderService orderService
+
+<h3>OrderDetails</h3>
+<MudGrid>
+    <MudItem xs="4">
+        <MudText Typo="Typo.h5">Kundeoplysninger</MudText>
+        <MudText Typo="Typo.h6">@orderModel.User.FirstName @orderModel.User.LastName</MudText>
+        <MudText Typo="Typo.body2">@orderModel.User.Address</MudText>
+        <MudText Typo="Typo.body2">@orderModel.User.PostalCode @orderModel.User.City</MudText>
+        <MudText Typo="Typo.body2">@orderModel.User.Email</MudText>
+        <MudText Typo="Typo.body2">@orderModel.User.PhoneNumber</MudText>
+    </MudItem>
+    <MudItem xs="4">
+        <MudText Typo="Typo.h5">Leveringsoplysninger</MudText>
+        @{
+            if (orderModel.HomeDelivery)
+            {
+                <MudText Typo="Typo.h6">@orderModel.User.FirstName @orderModel.User.LastName</MudText>
+                <MudText Typo="Typo.body2">@orderModel.User.Address</MudText>
+                <MudText Typo="Typo.body2">@orderModel.User.PostalCode + @orderModel.User.City</MudText>
+            }
+            else
+            {
+                <MudText Typo="Typo.body2">Afhentning i varehus</MudText>
+            }
+        }
+    </MudItem>
+    <MudItem xs="4">
+        <MudText Typo="Typo.h5">Bestillingsoplysninger</MudText>
+        <MudText Typo="Typo.h5">Ordrenummer: @orderModel.Id</MudText>
+        <MudText Typo="Typo.h5">Fakturenummer: 56828374</MudText>
+        <MudText Typo="Typo.h5">Betaling: @orderModel.PaymentDetails.Provider</MudText>
+        <MudText Typo="Typo.h5">Sælger: Elgros.dk</MudText>
+    </MudItem>
+    <MudDataGrid Items="@orderModel.Products">
+        <Columns>
+            <TemplateColumn>
+                <CellTemplate>
+                    <MudImage Src="@context.Item.Image" Width="100" Height="100" Alt="Item image" Elevation="25" Class="rounded-lg" />
+                </CellTemplate>
+            </TemplateColumn>
+            <PropertyColumn Property="x => x.Name" Title="Navn" />
+            <PropertyColumn Property="x => x.Brand" />
+            <PropertyColumn Property="x => x.Category" />
+            <PropertyColumn Title="Price Pr" Property="x => x.Price" />
+        </Columns>
+    </MudDataGrid>
+</MudGrid>
+
+@code {
+    [Parameter]
+    public string orderId { get; set; }
+    private OrderModel orderModel = new OrderModel(){User = new UserModel(), PaymentDetails = new PaymentModel()};
+
+    protected override async Task OnInitializedAsync()
+    {
+        orderModel = await orderService.GetOrder(Int32.Parse(orderId));
+    }
+}

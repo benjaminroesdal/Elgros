@@ -12,6 +12,21 @@ namespace ElgrosWeb.Client.Services
             _httpClient = httpClient;
         }
 
+        public async Task<OrderModel> GetOrder(int orderId)
+        {
+            try
+            {
+                var response = await _httpClient.GetAsync($"/api/Order/GetOrderById?orderId={orderId}");
+                var orderModel = await response.Content.ReadFromJsonAsync<OrderModel>();
+                return orderModel;
+            }
+            catch (Exception e)
+            {
+
+                throw;
+            }
+        }
+
         public async Task PostOrder(OrderModel order)
         {
             try
