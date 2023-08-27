@@ -6,15 +6,12 @@
 @inject CategoryService CategoryService
 @inject StateContainer stateContainer
 
-<h3>Product</h3>
-
-
 <MudGrid>
     @foreach (var product in products)
     {
-    <MudItem xs="4">
+        <MudItem xs="12" sm="6" md="4" lg="3">
             <MudButton OnClick="@(() => SelectProduct(product))">
-                <MudCard>
+                <MudCard Class="uniform-card">
                     <!-- Product Details -->
                     <MudCardContent>
                         <MudCardMedia Height="200" Image="@product.Image" />
