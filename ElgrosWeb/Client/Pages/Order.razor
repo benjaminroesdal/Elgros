@@ -5,6 +5,7 @@
 @inject StateContainer stateContainer
 @inject OrderService orderService
 @inject Blazored.LocalStorage.ILocalStorageService localStore
+@inject NavigationManager NavManager
 @page "/Order"
 
 <h3>Order</h3>
@@ -123,12 +124,12 @@
         stateContainer.Order.PaymentDetails.Status = PaymentStatus.Success;
         stateContainer.Order.Products = CreateProductList(stateContainer.BasketItems);
         stateContainer.Order.TotalAmount = GetTotalBasketAmount();
-        await orderService.PostOrder(stateContainer.Order);
+        var order = await orderService.PostOrder(stateContainer.Order);
         stateContainer.ResetState();
         await localStore.ClearAsync();
         paymentInProgress = false;
         StateHasChanged();
-
+        NavManager.NavigateTo($"/order-details/{order.Id}");
     }
 
     private List<ProductModel> CreateProductList(List<BasketItemModel> basketItems)

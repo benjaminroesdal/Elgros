@@ -77,15 +77,7 @@ namespace ElgrosWeb.Client.Pages
 
         public async void AddToBasket(ProductModel product)
         {
-            var existingItem = stateContainer.BasketItems.FirstOrDefault(e => e.Product.Id == product.Id);
-            if (existingItem != null)
-            {
-                existingItem.Quantity++;
-                await localStore.SetItemAsync("localStore_BasketItems", stateContainer.BasketItems);
-                return;
-            }
-            stateContainer.BasketItems.Add(new BasketItemModel() { Product = product, Quantity = 1 });
-            await localStore.SetItemAsync("localStore_BasketItems", stateContainer.BasketItems);
+            await localStorageService.AddToBasket(product);
             StateHasChanged();
         }
 

@@ -29,5 +29,12 @@ namespace ElgrosWeb.Server.Controllers
         {
             return await _orderFacade.CreateOrder(orderModel);
         }
+
+        [HttpPost]
+        [Route("FinalizeOrder")]
+        public async Task<OrderModel> FinalizeOrder([FromBody] OrderModel orderModel)
+        {
+            return await _orderFacade.FinalizeOrder(orderModel);
+        }
     }
 }

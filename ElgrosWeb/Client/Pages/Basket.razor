@@ -1,7 +1,8 @@
-﻿@inject Blazored.LocalStorage.ILocalStorageService localStore
+﻿@inject LocalStorageService localStorageService
 @inject NavigationManager main
 @inject StateContainer stateContainer
 @page "/Basket"
+@using ElgrosWeb.Client.Services;
 
 <h3>Indkøbskurv</h3>
 <MudDataGrid Items="@stateContainer.BasketItems">
@@ -31,7 +32,7 @@
                 <MudPaper Class="d-flex" Elevation="0">
                     <MudIconButton Icon="@Icons.Material.Outlined.Add" OnClick="() => AddToBasket(context.Item.Product)" />
                     <MudText>@context.Item.Quantity</MudText>
-                    <MudIconButton Icon="@Icons.Material.Outlined.Remove" Color="Color.Inherit" OnClick="() => RemoveFromBasket(context.Item.Product.Id, false)" />
+                    <MudIconButton Icon="@Icons.Material.Outlined.Remove" Color="Color.Inherit" OnClick="() => RemoveFromBasket(context.Item.Product.Id)" Disabled="context.Item.Quantity == 1" />
                 </MudPaper>
             </CellTemplate>
         </TemplateColumn>
@@ -46,7 +47,7 @@
                 <MudText Typo="Typo.h6">@SetTotalCostOfBasket()</MudText>
                 <MudText Typo="Typo.h5">Heraf moms</MudText>
                 <MudText Typo="Typo.h6">@GetTotalSalesTax()</MudText>
-                <MudButton Variant="Variant.Filled" Color="Color.Success" OnClick="OnOrderClick">Gå til kassen</MudButton>
+                <MudButton Variant="Variant.Filled" Color="Color.Success" OnClick="OnOrderClick" Disabled="!stateContainer.BasketItems.Any()">Gå til kassen</MudButton>
             </FooterTemplate>
         </TemplateColumn>
     </Columns>
@@ -64,7 +65,7 @@
     {
         if (firstRender)
         {
-            var items = await TryGetLocalStorage();
+            var items = await localStorageService.TryGetLocalStorage();
             if (items != null && items.Any())
             {
                 stateContainer.BasketItems = items;
@@ -75,36 +76,20 @@
 
     public async void AddToBasket(ProductModel product)
     {
-        var existingItem = stateContainer.BasketItems.FirstOrDefault(e => e.Product.Id == product.Id);
-        if (existingItem != null)
-        {
-            existingItem.Quantity++;
-            await localStore.SetItemAsync("localStore_BasketItems", stateContainer.BasketItems);
-            return;
-        }
-        stateContainer.BasketItems.Add(new BasketItemModel() { Product = product, Quantity = 1 });
-        await localStore.SetItemAsync("localStore_BasketItems", stateContainer.BasketItems);
+        await localStorageService.AddToBasket(product);
         StateHasChanged();
     }
 
-    public async void RemoveFromBasket(int itemId, bool removeAll = true)
+    public async void RemoveFromBasket(int itemId)
     {
-        var currentItems = await localStore.GetItemAsync<List<BasketItemModel>>("localStore_BasketItems");
-        var item = currentItems.FirstOrDefault(e => e.Product.Id == itemId);
-        item.Quantity--;
-        await localStore.SetItemAsync("localStore_BasketItems", currentItems);
-        stateContainer.BasketItems = currentItems;
+        await localStorageService.RemoveFromBasket(itemId);
         StateHasChanged();
     }
 
     public async void ClearItemFromBasket(int itemId)
     {
-        var currentItems = await localStore.GetItemAsync<List<BasketItemModel>>("localStore_BasketItems");
-        currentItems.RemoveAll(e => e.Product.Id == itemId);
-        await localStore.SetItemAsync("localStore_BasketItems", currentItems);
-        stateContainer.BasketItems = currentItems;
+        await localStorageService.ClearItemFromBasket(itemId);
         StateHasChanged();
-
     }
 
     public void OnOrderClick()
@@ -114,7 +99,8 @@
 
     public async void ClearBasket()
     {
-        await localStore.ClearAsync();
+        await localStorageService.ClearBasket();
+        StateHasChanged();
     }
 
     public double SetTotalCostOfBasket()
@@ -132,16 +118,5 @@
     {
         var totalTaxAmount = ((double)totalBasketPrice / 100) * 25;
         return Math.Round(totalTaxAmount, 2, MidpointRounding.AwayFromZero);
-    }
-
-    private async Task<List<BasketItemModel>> TryGetLocalStorage()
-    {
-        List<BasketItemModel> items = new List<BasketItemModel>();
-        try
-        {
-            items = await localStore.GetItemAsync<List<BasketItemModel>>("localStore_BasketItems");
-        }
-        catch (Exception){}
-        return items;
     }
 }

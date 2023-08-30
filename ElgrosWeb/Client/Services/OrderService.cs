@@ -27,11 +27,13 @@ namespace ElgrosWeb.Client.Services
             }
         }
 
-        public async Task PostOrder(OrderModel order)
+        public async Task<OrderModel> PostOrder(OrderModel order)
         {
             try
             {
                 var response = await _httpClient.PostAsJsonAsync("/api/Order/PostOrder", order);
+                var orderModel = await response.Content.ReadFromJsonAsync<OrderModel>();
+                return orderModel;
             }
             catch (Exception e)
             {

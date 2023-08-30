@@ -1,6 +1,5 @@
 ﻿using ElgrosWeb.Server.Data.Db;
 using ElgrosWeb.Server.Repositories.Interfaces;
-using ElgrosWeb.Shared.Dao;
 using ElgrosWeb.Shared.Models;
 using ElgrosWeb.Shared.Tools;
 using Microsoft.EntityFrameworkCore;
@@ -18,10 +17,18 @@ namespace ElgrosWeb.Server.Repositories
         public async Task<OrderModel> CreateAsync(OrderModel orderModel)
         {
             var dao = orderModel.CreateDao();
-            var daoProducts = await _context.Product.Include(x => x.SubCategoryList).Where(p => dao.Products.Contains(p)).ToListAsync();
-            dao.Products = daoProducts;
+            dao.Products = await _context.Product.Include(x => x.SubCategoryList).Where(p => dao.Products.Contains(p)).ToListAsync();
+            dao.PaymentDetails.Status = Shared.Enums.PaymentStatus.Pending;
             var result = await _context.Order.AddAsync(dao);
             _context.SaveChanges();
+            return dao.CreateModel();
+        }
+
+        public async Task<OrderModel> FinalizeOrder(int orderId)
+        {
+            var dao = await _context.Order.FirstOrDefaultAsync(e => e.Id == orderId);
+            dao.PaymentDetails.Status = Shared.Enums.PaymentStatus.Success;
+            await _context.SaveChangesAsync();
             return dao.CreateModel();
         }
 
