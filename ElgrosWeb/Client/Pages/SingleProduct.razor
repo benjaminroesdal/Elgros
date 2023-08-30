@@ -7,21 +7,24 @@
 @inject StateContainer stateContainer
 @inject ProductService ProductService
 
-<MudCard Style="height=100%;">
-    <MudCardHeader>
-        <CardHeaderContent>
-            <MudText Typo="Typo.body1">@product.Brand</MudText>
-            <MudText Typo="Typo.body2">@product.Name</MudText>
-        </CardHeaderContent>
-    </MudCardHeader>
-    <MudCardMedia Image="@product.Image" />
-    <MudCardContent>
-        <MudText Typo="Typo.body2">@product.Description</MudText>
-    </MudCardContent>
-    <MudCardActions>
-        <MudText>@product.Price.ToString("C")</MudText>
-        <MudIconButton Icon="@Icons.Material.Filled.ShoppingBag" OnClick="@(() => AddToBasket(product))" Color="Color.Primary"/>
-    </MudCardActions>
-</MudCard>
 
-
+<MudContainer MaxWidth="MaxWidth.Large">
+<MudGrid>
+    <MudItem md="12" sm="12">
+        <MudText Typo="Typo.h3">@product.Name</MudText>
+    </MudItem>
+    <MudItem lg="4" md="6" sm="12">
+        <img width="300" src="@product.Image" alt="@product.Name" />
+    </MudItem>
+    <MudItem lg="4" md="6" sm="12">
+        <MudPaper Class="pa-4">
+                    <MudText Typo="Typo.h4" Class="mb-4">Pris: @product.Price.ToString("C")</MudText>
+            <MudText Typo="Typo.body1">
+                <strong>Produkt beskrivelse:</strong> @product.Description
+            </MudText>
+            <MudText Typo="Typo.body1" Class="mb-4"><strong>Brand: </strong>@product.Brand</MudText>
+            <MudIconButton Class="mt-4" Icon="@Icons.Material.Filled.ShoppingBag" OnClick="@(() => AddToBasket(product))" Color="Color.Primary" />
+        </MudPaper>
+    </MudItem>
+</MudGrid>
+</MudContainer>
