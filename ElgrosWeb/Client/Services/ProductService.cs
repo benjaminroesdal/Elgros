@@ -1,5 +1,4 @@
 ﻿using System.Net.Http.Json;
-using ElgrosWeb.Client.Pages;
 using ElgrosWeb.Shared.Models;
 
 namespace ElgrosWeb.Client.Services;
@@ -27,5 +26,16 @@ public class ProductService
             // Handle the error or throw an exception
             throw new HttpRequestException($"Response code: {response.StatusCode}, Error: {await response.Content.ReadAsStringAsync()}");
         }
+    }
+
+    public async Task<List<ProductModel>> GetVvsProducts()
+    {
+        var products = await _httpClient.GetFromJsonAsync<List<ProductModel>>("/api/Product/GetVvsProducts");
+        return products;       
+    }
+    public async Task<List<ProductModel>> GetElectricalProducts()
+    {
+        var products = await _httpClient.GetFromJsonAsync<List<ProductModel>>("/api/Product/GetElectricalProducts");
+        return products;
     }
 }

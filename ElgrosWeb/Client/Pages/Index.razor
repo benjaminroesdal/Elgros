@@ -1,9 +1,32 @@
 ﻿@page "/"
+@using ElgrosWeb.Client.Services;
+@inject NavigationManager NavManager
+@inject ProductService ProductService
+@inject CategoryService CategoryService
 
 <PageTitle>Index</PageTitle>
 
-<h1>Hello, world!</h1>
 
-Welcome to your new app.
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <MudCarousel Class="mud-width-full" @ref="_carousel" ItemsSource="@VVSProducts" @bind-SelectedIndex="selectedIndex" Style="height:300px; width:75%;" ShowArrows="@_arrows" ShowBullets="@_bullets" EnableSwipeGesture="@_enableSwipeGesture" AutoCycle="@_autocycle">
+        <ItemTemplate>
+            <div class="d-flex flex-column flex-column justify-center" style="height:100%">
+                <MudImage Align="@Align.Center" Src="@context.Image" Width="200" Height="150" Alt="Image" Elevation="25" Class="rounded-lg ma-4 mx-auto " />
+                <MudText Align="@Align.Center" Class="mx-auto">@context.Name</MudText>
+                <MudText Align="@Align.Center" Class="mx-auto">@context.Price.ToString("C")</MudText>
+            </div>
+        </ItemTemplate>
+    </MudCarousel>
 
+    <MudDivider Style="width:75%;" />
 
+    <MudCarousel Class="mud-width-full" @ref="_carousel" ItemsSource="@ElecticalProducts" @bind-SelectedIndex="selectedIndex2" Style="height:300px; width:75%;" ShowArrows="@_arrows" ShowBullets="@_bullets" EnableSwipeGesture="@_enableSwipeGesture" AutoCycle="@_autocycle">
+        <ItemTemplate>
+            <div class="d-flex flex-column flex-column justify-center" style="height:100%">
+                <MudImage Align="@Align.Center" Src="@context.Image" Width="200" Height="150" Alt="Image" Elevation="25" Class="rounded-lg ma-4 mx-auto" />
+                <MudText Align="@Align.Center" Class="mx-auto">@context.Name</MudText>
+                <MudText Align="@Align.Center" Class="mx-auto">@context.Price.ToString("C")</MudText>
+            </div>
+        </ItemTemplate>
+    </MudCarousel>
+</div>
