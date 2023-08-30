@@ -13,9 +13,9 @@
 <MudLayout>
     <MudAppBar Elevation="1">
         <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
-        <MudText Typo="Typo.h5" Class="ml-3">Elgros</MudText>
+        <MudText Typo="Typo.h5" Class="ml-3" OnClick="GoToHref">Elgros</MudText>
         <MudSpacer/>
-        <MudTextField Label="Outlined" T="string" Variant="Variant.Outlined"></MudTextField>
+        <MudTextField Label="Søg" T="string" Variant="Variant.Text"></MudTextField>
         <MudBadge Content="StateContainer.BasketItems.Count" Color="Color.Primary" Overlap="true" Class="mx-6 my-4">
             <MudIconButton Icon="@Icons.Material.Filled.ShoppingBasket" Color="Color.Inherit" Edge="Edge.End" OnClick="HandleBasketClick" />
         </MudBadge>

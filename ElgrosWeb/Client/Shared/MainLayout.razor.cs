@@ -4,6 +4,7 @@ using ElgrosWeb.Shared.Models;
 using ElgrosWeb.Client.Services;
 using System.Text.Json;
 using System.Web;
+using Microsoft.AspNetCore.Components;
 
 namespace ElgrosWeb.Client.Shared;
 
@@ -54,6 +55,11 @@ public partial class MainLayout
     private void HandleBasketClick()
     {
         NavManager.NavigateTo("/Basket");
+    }
+    private void GoToHref()
+    {
+        // Use Blazor's NavigationManager to navigate
+        NavManager.NavigateTo("/");
     }
 
     void DrawerToggle()
