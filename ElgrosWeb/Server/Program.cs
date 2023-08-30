@@ -16,6 +16,8 @@ builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IProductFacade, ProductFacade>();
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<IOrderFacade, OrderFacade>();
+builder.Services.AddScoped<IPaymentFacade, PaymentFacade>();
+builder.Services.AddScoped<INotificationFacade, NotificationFacade>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
