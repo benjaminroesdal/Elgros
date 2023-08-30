@@ -63,11 +63,11 @@
                         @foreach (var item in stateContainer.BasketItems)
                         {
                             <MudText Typo="Typo.h6">@item.Product.Name</MudText>
-                            <MudText Typo="Typo.body2">Pris : @item.Product.Price</MudText>
+                            <MudText Typo="Typo.body2">Pris : @item.Product.Price kr</MudText>
                             <MudText Typo="Typo.body2">Antal : @item.Quantity</MudText>
                         }
                         <MudText Typo="Typo.body1">Fragt : 50kr</MudText>
-                        <MudText Typo="Typo.h5">Total beløb : @GetTotalBasketAmount()</MudText>
+                        <MudText Typo="Typo.h5">Total beløb : @GetTotalBasketAmount() kr</MudText>
                     </MudCardContent>
                 </MudCard>
                 <MudProgressCircular Color="Color.Success" Indeterminate="paymentInProgress"/>

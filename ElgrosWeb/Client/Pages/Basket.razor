@@ -23,7 +23,7 @@
                         double accumulatedPrice = 0;
                         accumulatedPrice = context.Item.Product.Price * context.Item.Quantity;
                     }
-                    @accumulatedPrice
+                    @accumulatedPrice kr
                 </MudText>
             </CellTemplate>
         </TemplateColumn>
@@ -44,9 +44,9 @@
     </Columns>
 </MudDataGrid>
 <MudText Typo="Typo.h5">Total</MudText>
-<MudText Typo="Typo.h6">@SetTotalCostOfBasket()</MudText>
+<MudText Typo="Typo.h6">@SetTotalCostOfBasket() kr</MudText>
 <MudText Typo="Typo.h5">Heraf moms</MudText>
-<MudText Typo="Typo.h6">@GetTotalSalesTax()</MudText>
+<MudText Typo="Typo.h6">@GetTotalSalesTax() kr</MudText>
 <MudButton Variant="Variant.Filled" Color="Color.Success" OnClick="OnOrderClick" Disabled="!stateContainer.BasketItems.Any()">Gå til kassen</MudButton>
 
 @code {
