@@ -2,5 +2,6 @@
 {
     public interface INotificationFacade
     {
+        Task SendEmail(string content, string recipientEmail);
     }
 }

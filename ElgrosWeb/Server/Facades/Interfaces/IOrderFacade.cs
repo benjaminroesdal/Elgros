@@ -7,5 +7,6 @@ namespace ElgrosWeb.Server.Facades.Interfaces
     {
         Task<OrderModel> CreateOrder(OrderModel orderModel);
         Task<OrderModel> GetOrder(int orderId);
+        Task<OrderModel> FinalizeOrder(OrderModel orderModel);
     }
 }

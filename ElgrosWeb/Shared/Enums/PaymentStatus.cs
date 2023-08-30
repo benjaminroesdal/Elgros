@@ -10,6 +10,7 @@ namespace ElgrosWeb.Shared.Enums
     {
         Success,
         Failed,
-        Not_Initialized
+        Not_Initialized,
+        Pending
     }
 }
