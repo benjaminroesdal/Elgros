@@ -23,6 +23,7 @@
                 <strong>Produkt beskrivelse:</strong> @product.Description
             </MudText>
             <MudText Typo="Typo.body1" Class="mb-4"><strong>Brand: </strong>@product.Brand</MudText>
+            <MudText Typo="Typo.body1" Class="mb-4"><strong>På lager: </strong>@product.StockQuantity</MudText>
             <MudIconButton Class="mt-4" Icon="@Icons.Material.Filled.ShoppingBag" OnClick="@(() => AddToBasket(product))" Color="Color.Primary" />
         </MudPaper>
     </MudItem>

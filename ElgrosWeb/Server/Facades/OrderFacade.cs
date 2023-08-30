@@ -27,7 +27,7 @@ namespace ElgrosWeb.Server.Facades
                 throw new Exception("Payment not received");
             }
             var order = await _orderRepository.FinalizeOrder(orderModel.Id);
-            await _notificationFacade.SendEmail($"Ordrebekræftelse på ordre:{orderModel.Id}. Du kan se din ordre på følgende link: URLPLACEHOLDER", orderModel.User.Email);
+            // await _notificationFacade.SendEmail($"Ordrebekræftelse på ordre:{orderModel.Id}. Du kan se din ordre på følgende link: URLPLACEHOLDER", orderModel.User.Email);
             return order;
         }
 

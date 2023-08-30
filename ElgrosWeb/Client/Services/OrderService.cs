@@ -41,5 +41,20 @@ namespace ElgrosWeb.Client.Services
                 throw;
             }
         }
+
+        public async Task<OrderModel> FinalizeOrder(OrderModel order)
+        {
+            try
+            {
+                var response = await _httpClient.PostAsJsonAsync("/api/Order/FinalizeOrder", order);
+                var orderModel = await response.Content.ReadFromJsonAsync<OrderModel>();
+                return orderModel;
+            }
+            catch (Exception e)
+            {
+
+                throw;
+            }
+        }
     }
 }

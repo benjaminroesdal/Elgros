@@ -26,7 +26,11 @@ namespace ElgrosWeb.Server.Repositories
 
         public async Task<OrderModel> FinalizeOrder(int orderId)
         {
-            var dao = await _context.Order.FirstOrDefaultAsync(e => e.Id == orderId);
+            var dao = await _context.Order.Include(e => e.Products)
+                .ThenInclude(e => e.SubCategoryList)
+                .Include(e => e.User)
+                .Include(e => e.PaymentDetails)
+                .FirstOrDefaultAsync(e => e.Id == orderId);
             dao.PaymentDetails.Status = Shared.Enums.PaymentStatus.Success;
             await _context.SaveChangesAsync();
             return dao.CreateModel();

@@ -34,14 +34,13 @@
     <MudExpansionPanel Text="2. Handelsbetingelser og persondatapolitik" MaxHeight="500" IsExpanded="showPolicies" Disabled="!showPolicies">
         <MudText>For at du kan handle ved Elgros, skal du acceptere vores handelsbetingelser og vores persondatapolitik.</MudText>
         <MudText>Du kan læse mere om disse ved at klikke på de to links nedenfor.</MudText>
-        <MudLink><MudText>Klik her for at læse vores handelsbetingelser</MudText></MudLink>
-        <MudLink><MudText>Klik her for at læse vores persondatapolitik</MudText></MudLink>
+        <MudLink OnClick="NavigateToPolicies"><MudText>Klik her for at læse vores handelsbetingelser og persondatapolitik</MudText></MudLink>
         <MudButton Variant="Variant.Filled" Color="Color.Success" DisableElevation="true" OnClick="PoliciesAcceptedFilled">Jeg accepterer Elgros' betingelser</MudButton>
     </MudExpansionPanel>
     <MudExpansionPanel Text="3. Vælg leveringsmetode" MaxHeight="1000" IsExpanded="showDelivery" Disabled="!showDelivery">
         <MudRadioGroup T="int">
             <MudRadio Option="1" UnCheckedColor="Color.Default">Afhentning i varehus - Elgrosvej 12, 4200 Slagelse</MudRadio>
-            <MudRadio Option="2" UnCheckedColor="Color.Default">Postnord - Levering til døren</MudRadio>
+            <MudRadio Option="2" UnCheckedColor="Color.Default">Postnord - Levering til døren - 50kr</MudRadio>
         </MudRadioGroup>
         <MudButton Variant="Variant.Filled" Color="Color.Success" DisableElevation="true" OnClick="DeliveryFilled">Næste</MudButton>
     </MudExpansionPanel>
@@ -118,18 +117,18 @@
     public async void ExecutePayment()
     {
         paymentInProgress = true;
-        await Task.Delay(4000);
-
         stateContainer.Order.PaymentDetails.Provider = "VISA";
-        stateContainer.Order.PaymentDetails.Status = PaymentStatus.Success;
+        stateContainer.Order.PaymentDetails.Status = PaymentStatus.Pending;
         stateContainer.Order.Products = CreateProductList(stateContainer.BasketItems);
         stateContainer.Order.TotalAmount = GetTotalBasketAmount();
         var order = await orderService.PostOrder(stateContainer.Order);
+        // Execute payment on third party provider
+        var finalizedOrder = await orderService.FinalizeOrder(order);
         stateContainer.ResetState();
         await localStore.ClearAsync();
         paymentInProgress = false;
         StateHasChanged();
-        NavManager.NavigateTo($"/order-details/{order.Id}");
+        NavManager.NavigateTo($"/order-details/{finalizedOrder.Id}");
     }
 
     private List<ProductModel> CreateProductList(List<BasketItemModel> basketItems)
@@ -152,6 +151,11 @@
         {
             totalAmount = item.Product.Price * item.Quantity + totalAmount;
         }
-        return totalAmount;
+        return totalAmount + 50;
+    }
+
+    public void NavigateToPolicies()
+    {
+        NavManager.NavigateTo("/Handelsbetingelser");
     }
 }

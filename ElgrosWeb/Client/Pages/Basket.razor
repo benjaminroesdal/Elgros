@@ -41,17 +41,13 @@
                 <MudFab OnClick="() => ClearItemFromBasket(context.Item.Product.Id)" Size="Size.Small" Color="Color.Error" StartIcon="@Icons.Material.Filled.Delete" Disabled="false" />
             </CellTemplate>
         </TemplateColumn>
-        <TemplateColumn>
-            <FooterTemplate>
-                <MudText Typo="Typo.h5">Total</MudText>
-                <MudText Typo="Typo.h6">@SetTotalCostOfBasket()</MudText>
-                <MudText Typo="Typo.h5">Heraf moms</MudText>
-                <MudText Typo="Typo.h6">@GetTotalSalesTax()</MudText>
-                <MudButton Variant="Variant.Filled" Color="Color.Success" OnClick="OnOrderClick" Disabled="!stateContainer.BasketItems.Any()">Gå til kassen</MudButton>
-            </FooterTemplate>
-        </TemplateColumn>
     </Columns>
 </MudDataGrid>
+<MudText Typo="Typo.h5">Total</MudText>
+<MudText Typo="Typo.h6">@SetTotalCostOfBasket()</MudText>
+<MudText Typo="Typo.h5">Heraf moms</MudText>
+<MudText Typo="Typo.h6">@GetTotalSalesTax()</MudText>
+<MudButton Variant="Variant.Filled" Color="Color.Success" OnClick="OnOrderClick" Disabled="!stateContainer.BasketItems.Any()">Gå til kassen</MudButton>
 
 @code {
     double totalBasketPrice;
