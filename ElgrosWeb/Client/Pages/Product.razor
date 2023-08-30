@@ -9,22 +9,16 @@
 <MudGrid>
     @foreach (var product in products)
     {
-        <MudItem xs="12" sm="6" md="4" lg="3">
-            <MudButton OnClick="@(() => SelectProduct(product))">
-                <MudCard Class="uniform-card">
-                    <!-- Product Details -->
-                    <MudCardContent>
-                        <MudCardMedia Height="200" Image="@product.Image" />
-                        <MudText Typo="Typo.h6">@product.Name</MudText>
-                        <MudText>@product.Description</MudText>
-                        <MudText Typo="Typo.subtitle1">@product.Brand</MudText>
-                        <MudText Typo="Typo.h6">@product.Price.ToString("C")</MudText>
-                    </MudCardContent>
-                    <MudCardActions>
-                        <MudButton Color="Color.Primary" Variant="Variant.Filled" OnClick="@(() => AddToBasket(product))">Tilføj til kurv</MudButton>
-                    </MudCardActions>
-                </MudCard>
-            </MudButton>
+
+        <MudItem xs="12" sm="6" md="3" lg="3">
+            <div class="d-flex flex-column flex-column justify-center" style="height:100%">
+                <MudImage Align="@Align.Center" Src="@product.Image" Width="200" Height="150" Alt="Image" Elevation="25" Class="rounded-lg ma-4 mx-auto" />
+                <MudText Align="@Align.Center" Class="mx-auto">@product.Name</MudText>
+                <MudText Align="@Align.Center" Class="mx-auto">@product.Brand</MudText>
+                <MudText Align="@Align.Center" Class="mx-auto">@product.Price.ToString("C")</MudText>
+            </div>
         </MudItem>
+
+
     }  
 </MudGrid>
