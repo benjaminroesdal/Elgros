@@ -14,6 +14,7 @@ namespace ElgrosWeb.Client.Pages
             await ProcessUrlParameters();
         }
 
+        //Method reads the url to retreive the prev selected product
         private async Task ProcessUrlParameters()
         {
             var uri = new Uri(NavManager.Uri);
@@ -23,6 +24,11 @@ namespace ElgrosWeb.Client.Pages
             product = JsonSerializer.Deserialize<ProductModel>(decodedProduct);
         }
 
+
+        /// <summary>
+        /// Adds to basket and saves in localstorage and updates state
+        /// </summary>
+        /// <param name="product"></param>
         public async void AddToBasket(ProductModel product)
         {
             var existingItem = stateContainer.BasketItems.FirstOrDefault(e => e.Product.Id == product.Id);

@@ -11,7 +11,7 @@ namespace ElgrosWeb.Client.Services
         {
             _httpClient = httpClient;
         }
-
+    
         public async Task<OrderModel> GetOrder(int orderId)
         {
             try
@@ -22,7 +22,6 @@ namespace ElgrosWeb.Client.Services
             }
             catch (Exception e)
             {
-
                 throw;
             }
         }
@@ -42,6 +41,11 @@ namespace ElgrosWeb.Client.Services
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="order"></param>
+        /// <returns>orderModel</returns>
         public async Task<OrderModel> FinalizeOrder(OrderModel order)
         {
             try
@@ -52,7 +56,6 @@ namespace ElgrosWeb.Client.Services
             }
             catch (Exception e)
             {
-
                 throw;
             }
         }

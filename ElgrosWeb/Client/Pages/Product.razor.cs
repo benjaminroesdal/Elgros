@@ -31,6 +31,12 @@ namespace ElgrosWeb.Client.Pages
             await ProcessUrlParameters();
         }
 
+
+        /// <summary>
+        /// Extracts and decodes URL query parameters from the
+        /// current navigation URI and attempts to decode.
+        /// </summary>
+        /// <returns></returns>
         private async Task ProcessUrlParameters()
         {
             products.Clear();

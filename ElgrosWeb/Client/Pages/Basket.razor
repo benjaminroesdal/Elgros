@@ -57,6 +57,11 @@
         stateContainer.OnChange += StateHasChanged;
     }
 
+    /// <summary>
+    /// Tries to set the BasketItems to the items in localStorage
+    /// </summary>
+    /// <param name="firstRender"></param>
+    /// <returns></returns>
     protected async override Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
@@ -76,18 +81,29 @@
         StateHasChanged();
     }
 
+    //// <summary>
+    /// Removes items from basket
+    /// </summary>
+    /// <param name="itemId"></param>
     public async void RemoveFromBasket(int itemId)
     {
         await localStorageService.RemoveFromBasket(itemId);
         StateHasChanged();
     }
 
+    /// <summary>
+    /// Clears items from basket
+    /// </summary>
+    /// <param name="itemId"></param>
     public async void ClearItemFromBasket(int itemId)
     {
         await localStorageService.ClearItemFromBasket(itemId);
         StateHasChanged();
     }
 
+    /// <summary>
+    /// Handles order click and redirects to order page
+    /// </summary>
     public void OnOrderClick()
     {
         main.NavigateTo("Order");
@@ -99,6 +115,10 @@
         StateHasChanged();
     }
 
+    /// <summary>
+    /// Calculates total cost of basket
+    /// </summary>
+    /// <returns></returns>
     public double SetTotalCostOfBasket()
     {
         double total = 0d;
