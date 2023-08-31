@@ -16,6 +16,11 @@ namespace ElgrosWeb.Server.Controllers
             _orderFacade = orderFacade;
         }
 
+        /// <summary>
+        /// Gets order based on provided orderId
+        /// </summary>
+        /// <param name="orderId">OrderId to find order on</param>
+        /// <returns>Order found on orderId</returns>
         [HttpGet]
         [Route("GetOrderById")]
         public async Task<OrderModel> GetOrder(int orderId)
@@ -23,6 +28,11 @@ namespace ElgrosWeb.Server.Controllers
             return await _orderFacade.GetOrder(orderId);
         }
 
+        /// <summary>
+        /// Creates an order based on provided model
+        /// </summary>
+        /// <param name="orderModel">OrderModel to create in DB</param>
+        /// <returns>Created order</returns>
         [HttpPost]
         [Route("PostOrder")]
         public async Task<OrderModel> CreateOrder([FromBody] OrderModel orderModel)
@@ -30,6 +40,11 @@ namespace ElgrosWeb.Server.Controllers
             return await _orderFacade.CreateOrder(orderModel);
         }
 
+        /// <summary>
+        /// Finalize provided order and send confirmation email
+        /// </summary>
+        /// <param name="orderModel">Order to finalize</param>
+        /// <returns>Finalized order</returns>
         [HttpPost]
         [Route("FinalizeOrder")]
         public async Task<OrderModel> FinalizeOrder([FromBody] OrderModel orderModel)
