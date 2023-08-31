@@ -28,6 +28,11 @@ namespace ElgrosWeb.Client.Services
             await _localStorageService.SetItemAsync("localStore_BasketItems", _stateContainer.BasketItems);
         }
 
+        /// <summary>
+        /// removes one item from at selected item
+        /// </summary>
+        /// <param name="itemId"></param>
+        /// <returns></returns>
         public async Task RemoveFromBasket(int itemId)
         {
             var currentItems = await _localStorageService.GetItemAsync<List<BasketItemModel>>("localStore_BasketItems");
@@ -50,6 +55,10 @@ namespace ElgrosWeb.Client.Services
             await _localStorageService.ClearAsync();
         }
 
+        /// <summary>
+        /// Fetches items from localstorage
+        /// </summary>
+        /// <returns>items</returns>
         public async Task<List<BasketItemModel>> TryGetLocalStorage()
         {
             List<BasketItemModel> items = new List<BasketItemModel>();

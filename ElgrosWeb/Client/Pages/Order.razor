@@ -114,6 +114,9 @@
         showPayment = true;
     }
 
+    /// <summary>
+    /// Executes payment and sets statecontainer order fields to the chosen fields.
+    /// </summary>
     public async void ExecutePayment()
     {
         paymentInProgress = true;
@@ -131,6 +134,11 @@
         NavManager.NavigateTo($"/order-details/{finalizedOrder.Id}");
     }
 
+    /// <summary>
+    /// Creates product list based on items in basket(basketItems)
+    /// </summary>
+    /// <param name="basketItems"></param>
+    /// <returns></returns>
     private List<ProductModel> CreateProductList(List<BasketItemModel> basketItems)
     {
         List<ProductModel> productList = new List<ProductModel>();
